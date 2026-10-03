@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Interview Practice Question Bank</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/dashboard.html">
+                <span class="fw-bold">Interview Practice Question Bank</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div id="navbar-auth-section" class="w-100">
+                    <!-- Dynamic auth links -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <!-- Welcome Header -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="fw-bold mb-1" id="greeting-title">Welcome Back!</h2>
+                    <p class="text-muted mb-0">Track your interview preparation progress and start focused practice</p>
+                </div>
+                <div class="mt-2 mt-sm-0 d-flex gap-2">
+                    <a href="/quiz.html" class="btn btn-success px-4 py-2 fw-semibold">
+                        Start Topic Quiz
+                    </a>
+                    <a href="/practice.html" class="btn btn-primary px-4 py-2 fw-semibold">
+                        Quick Practice Session
+                    </a>
+                </div>
+            </div>
+
+            <!-- Statistics Overview Cards -->
+            <div class="row g-3 mb-4">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card p-3 h-100">
+                        <div class="stat-label">Total Attempts</div>
+                        <div class="stat-value mt-2 text-primary" id="stat-attempts">-</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card stat-success p-3 h-100">
+                        <div class="stat-label">Questions Attempted</div>
+                        <div class="stat-value mt-2 text-success" id="stat-questions">-</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card stat-warning p-3 h-100">
+                        <div class="stat-label">Bookmarked Questions</div>
+                        <div class="stat-value mt-2 text-warning" id="stat-bookmarks">-</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card stat-danger p-3 h-100">
+                        <div class="stat-label">Weak Topics</div>
+                        <div class="stat-value mt-2 text-danger" id="stat-weak-topics">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Practice Options Grid -->
+            <div class="mb-4">
+                <h4 class="fw-bold mb-3">Practice Navigation</h4>
+                <div class="row g-3">
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/quiz.html" class="card h-100 text-decoration-none card-hover border border-success-subtle">
+                            <div class="card-body">
+                                <span class="badge bg-success text-white mb-2">New Feature</span>
+                                <h6 class="fw-bold text-dark mb-1">Subject & Topic Quiz</h6>
+                                <p class="text-muted small mb-0">Select subject and topic from 3000+ questions with multiple-choice options.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/practice.html" class="card h-100 text-decoration-none card-hover border">
+                            <div class="card-body">
+                                <span class="badge bg-light text-secondary border mb-2">Timed Mode</span>
+                                <h6 class="fw-bold text-dark mb-1">Start Timed Practice</h6>
+                                <p class="text-muted small mb-0">Launch customizable mock interviews with timer and answer evaluation.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/questions.html" class="card h-100 text-decoration-none card-hover border">
+                            <div class="card-body">
+                                <span class="badge bg-light text-secondary border mb-2">Repository</span>
+                                <h6 class="fw-bold text-dark mb-1">Browse Question Bank</h6>
+                                <p class="text-muted small mb-0">Filter questions by role, skill, and difficulty level.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/weak-topics.html" class="card h-100 text-decoration-none card-hover border">
+                            <div class="card-body">
+                                <span class="badge bg-light text-secondary border mb-2">Analytics</span>
+                                <h6 class="fw-bold text-dark mb-1">Weak-Topic Analysis</h6>
+                                <p class="text-muted small mb-0">Review low-rating topics and targeted improvement recommendations.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/weak-topics.html#personalised" class="card h-100 text-decoration-none card-hover border">
+                            <div class="card-body">
+                                <span class="badge bg-light text-secondary border mb-2">Targeted</span>
+                                <h6 class="fw-bold text-dark mb-1">Personalised Practice</h6>
+                                <p class="text-muted small mb-0">Recommended sets focusing on your weakest areas and saved questions.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/bookmarks.html" class="card h-100 text-decoration-none card-hover border">
+                            <div class="card-body">
+                                <span class="badge bg-light text-secondary border mb-2">Saved</span>
+                                <h6 class="fw-bold text-dark mb-1">Saved Bookmarks</h6>
+                                <p class="text-muted small mb-0">Revisit tricky interview questions you have bookmarked.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/attempts.html" class="card h-100 text-decoration-none card-hover border">
+                            <div class="card-body">
+                                <span class="badge bg-light text-secondary border mb-2">Logs</span>
+                                <h6 class="fw-bold text-dark mb-1">Attempt History</h6>
+                                <p class="text-muted small mb-0">Review your past answers, time taken, and self-evaluations.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <a href="/questions.html?filter=role" class="card h-100 text-decoration-none card-hover border">
+                            <div class="card-body">
+                                <span class="badge bg-light text-secondary border mb-2">Role Based</span>
+                                <h6 class="fw-bold text-dark mb-1">Practice by Role</h6>
+                                <p class="text-muted small mb-0">Frontend, Backend, Full Stack, Java, Python and Tester roles.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two Columns: Recent Attempts & Recent Bookmarks -->
+            <div class="row g-4">
+                <!-- Recent Attempts -->
+                <div class="col-lg-7">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span>Recent Practice Attempts</span>
+                            <a href="/attempts.html" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Role</th>
+                                            <th>Date</th>
+                                            <th>Questions</th>
+                                            <th>Rating</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recent-attempts-table">
+                                        <tr>
+                                            <td colspan="5" class="text-center py-4 text-muted">Loading recent attempts...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Bookmarks -->
+                <div class="col-lg-5">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span>Bookmarked Questions</span>
+                            <a href="/bookmarks.html" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body p-3" id="recent-bookmarks-list">
+                            <div class="text-center py-4 text-muted">Loading bookmarks...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">Interview Practice Question Bank &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

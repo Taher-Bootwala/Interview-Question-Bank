@@ -1,0 +1,4148 @@
+
+# DBMS Question Bank — 300 Questions
+
+## 1. ACID Properties — 20 Questions
+
+1. What are ACID properties in DBMS?
+2. Explain Atomicity with a suitable example.
+3. What is Consistency in a database transaction?
+4. Explain Isolation with an example.
+5. What is Durability in DBMS?
+6. Why are ACID properties important for database transactions?
+7. How does Atomicity ensure transaction reliability?
+8. How does a DBMS maintain Consistency?
+9. What problems can occur if Atomicity is not maintained?
+10. What is the difference between Atomicity and Durability?
+11. How does Isolation prevent interference between transactions?
+12. Give a real-world example demonstrating all four ACID properties.
+13. What happens when a transaction fails before COMMIT?
+14. What is the role of COMMIT in maintaining ACID properties?
+15. What is the role of ROLLBACK in transaction management?
+16. How does Durability protect committed data from system failures?
+17. Differentiate between Consistency and Isolation.
+18. Can a transaction be durable before it is committed? Explain.
+19. How do ACID properties help banking systems?
+20. Explain ACID properties with a money-transfer transaction.
+
+---
+
+# 2. Normalization (1NF–BCNF) — 20 Questions
+
+1. What is normalization in DBMS?
+2. Why is normalization required?
+3. What is data redundancy?
+4. What are insertion, deletion, and update anomalies?
+5. Explain First Normal Form (1NF).
+6. What are the conditions for a relation to be in 1NF?
+7. Explain Second Normal Form (2NF).
+8. What is partial dependency?
+9. Explain Third Normal Form (3NF).
+10. What is transitive dependency?
+11. Explain Boyce-Codd Normal Form (BCNF).
+12. What is functional dependency?
+13. Differentiate between 1NF and 2NF.
+14. Differentiate between 2NF and 3NF.
+15. Differentiate between 3NF and BCNF.
+16. Convert a given unnormalized relation into 1NF.
+17. Convert a 1NF relation into 2NF.
+18. Convert a 2NF relation into 3NF.
+19. What problems are solved by normalization?
+20. Explain normalization from 1NF to BCNF with a suitable example.
+
+---
+
+# 3. Denormalization — 20 Questions
+
+1. What is denormalization?
+2. Why is denormalization used?
+3. How is denormalization different from normalization?
+4. What are the advantages of denormalization?
+5. What are the disadvantages of denormalization?
+6. How does denormalization improve query performance?
+7. How does denormalization affect data redundancy?
+8. When should a database be denormalized?
+9. What is the relationship between normalization and denormalization?
+10. Give a real-world example of denormalization.
+11. How does denormalization affect update operations?
+12. Can denormalization cause data inconsistency?
+13. Why is denormalization commonly used in read-heavy systems?
+14. What is controlled redundancy?
+15. Compare normalized and denormalized databases.
+16. How can denormalization reduce the number of JOIN operations?
+17. What factors should be considered before denormalizing a database?
+18. Is denormalization always better for performance? Explain.
+19. Explain a practical example where denormalization is beneficial.
+20. Explain the advantages and disadvantages of denormalization.
+
+---
+
+# 4. Primary Key vs Foreign Key — 20 Questions
+
+1. What is a primary key?
+2. What is a foreign key?
+3. Why is a primary key required?
+4. Why is a foreign key required?
+5. What are the characteristics of a primary key?
+6. What are the characteristics of a foreign key?
+7. Can a primary key contain NULL values?
+8. Can a foreign key contain NULL values?
+9. Can a table have multiple primary keys?
+10. Can a table have multiple foreign keys?
+11. What is referential integrity?
+12. Explain primary key with an example.
+13. Explain foreign key with an example.
+14. Differentiate between primary key and foreign key.
+15. Can a foreign key reference another table's primary key?
+16. Can a foreign key reference a unique key?
+17. What happens when a referenced record is deleted?
+18. Explain ON DELETE CASCADE.
+19. Explain ON UPDATE CASCADE.
+20. Write SQL statements to create primary-key and foreign-key constraints.
+
+---
+
+# 5. Indexing — 20 Questions
+
+1. What is indexing in DBMS?
+2. Why are indexes used?
+3. How does an index improve query performance?
+4. What are the advantages of indexing?
+5. What are the disadvantages of indexing?
+6. What is an index key?
+7. What is a dense index?
+8. What is a sparse index?
+9. What is a primary index?
+10. What is a secondary index?
+11. What is a composite index?
+12. What is a unique index?
+13. What happens when too many indexes are created?
+14. How do indexes affect INSERT operations?
+15. How do indexes affect UPDATE operations?
+16. How do indexes affect DELETE operations?
+17. On which columns should indexes generally be created?
+18. Write SQL syntax to create an index.
+19. Write SQL syntax to remove an index.
+20. Explain indexing with a suitable example.
+
+---
+
+# 6. Clustered vs Non-Clustered Index — 20 Questions
+
+1. What is a clustered index?
+2. What is a non-clustered index?
+3. How does a clustered index store data?
+4. How does a non-clustered index store data?
+5. How many clustered indexes can a table generally have?
+6. How many non-clustered indexes can a table have?
+7. What is the relationship between physical data order and clustered indexes?
+8. What is the structure of a non-clustered index?
+9. Compare clustered and non-clustered indexes.
+10. Which index is generally useful for range queries?
+11. What happens when a clustered index is created on a column?
+12. Can a primary key automatically create a clustered index?
+13. What are the advantages of clustered indexes?
+14. What are the disadvantages of clustered indexes?
+15. What are the advantages of non-clustered indexes?
+16. What are the disadvantages of non-clustered indexes?
+17. Give a real-world example of a clustered index.
+18. Give a real-world example of a non-clustered index.
+19. When should a clustered index be preferred?
+20. Explain clustered and non-clustered indexes with an example.
+
+---
+
+# 7. B+ Trees — 20 Questions
+
+1. What is a B+ Tree?
+2. Why are B+ Trees used in DBMS?
+3. What are the characteristics of a B+ Tree?
+4. What is the difference between a B Tree and B+ Tree?
+5. What is the root node in a B+ Tree?
+6. What are internal nodes in a B+ Tree?
+7. What are leaf nodes in a B+ Tree?
+8. Where are actual data pointers generally stored in a B+ Tree?
+9. Why are leaf nodes linked in a B+ Tree?
+10. How does a B+ Tree support range queries?
+11. What is the order of a B+ Tree?
+12. Explain insertion in a B+ Tree.
+13. Explain deletion in a B+ Tree.
+14. What happens when a B+ Tree node overflows?
+15. What is node splitting?
+16. What is node merging?
+17. What is the height of a B+ Tree?
+18. What is the time complexity of searching in a B+ Tree?
+19. Why are B+ Trees suitable for disk-based databases?
+20. Draw and explain the structure of a B+ Tree.
+
+---
+
+# 8. Joins — 20 Questions
+
+1. What is a JOIN in SQL?
+2. Why are joins required in relational databases?
+3. What is an INNER JOIN?
+4. What is a LEFT JOIN?
+5. What is a RIGHT JOIN?
+6. What is a FULL OUTER JOIN?
+7. What is a CROSS JOIN?
+8. What is a SELF JOIN?
+9. What is a NATURAL JOIN?
+10. What is an equi-join?
+11. What is a non-equi join?
+12. Differentiate between INNER JOIN and OUTER JOIN.
+13. Differentiate between LEFT JOIN and RIGHT JOIN.
+14. What is the purpose of a SELF JOIN?
+15. What is a Cartesian product?
+16. Write an SQL query using INNER JOIN.
+17. Write an SQL query using LEFT JOIN.
+18. Write an SQL query using RIGHT JOIN.
+19. Write an SQL query to perform a SELF JOIN.
+20. Explain all major types of SQL joins with examples.
+
+---
+
+# 9. Transactions — 20 Questions
+
+1. What is a transaction in DBMS?
+2. What are the states of a transaction?
+3. Explain the Active state.
+4. Explain the Partially Committed state.
+5. Explain the Committed state.
+6. Explain the Failed state.
+7. Explain the Aborted state.
+8. What is COMMIT?
+9. What is ROLLBACK?
+10. What is SAVEPOINT?
+11. What is a transaction schedule?
+12. What is a serial schedule?
+13. What is a non-serial schedule?
+14. What is serializability?
+15. What is conflict serializability?
+16. What is recoverability of a schedule?
+17. How does a DBMS recover a failed transaction?
+18. Explain transaction processing using a bank-transfer example.
+19. What is the relationship between transactions and ACID properties?
+20. Explain the complete transaction life cycle.
+
+---
+
+# 10. Locks — Shared / Exclusive — 20 Questions
+
+1. What is locking in DBMS?
+2. Why are locks required?
+3. What is a shared lock?
+4. What is an exclusive lock?
+5. When is a shared lock used?
+6. When is an exclusive lock used?
+7. Can multiple transactions hold shared locks simultaneously?
+8. Can multiple transactions hold exclusive locks simultaneously?
+9. Can a shared lock coexist with an exclusive lock?
+10. What is lock compatibility?
+11. Explain shared and exclusive locks with an example.
+12. What is lock conversion?
+13. What is lock escalation?
+14. What is two-phase locking (2PL)?
+15. What are the two phases of 2PL?
+16. What is strict two-phase locking?
+17. How do locks maintain isolation?
+18. What problems can occur because of excessive locking?
+19. Compare shared lock and exclusive lock.
+20. Explain the lock compatibility matrix.
+
+---
+
+# 11. Deadlock — 20 Questions
+
+1. What is a deadlock in DBMS?
+2. Why does deadlock occur?
+3. Give a simple example of a database deadlock.
+4. What are the necessary conditions for deadlock?
+5. Explain mutual exclusion.
+6. Explain hold and wait.
+7. Explain no preemption.
+8. Explain circular wait.
+9. What is deadlock prevention?
+10. What is deadlock avoidance?
+11. What is deadlock detection?
+12. What is deadlock recovery?
+13. What is a wait-for graph?
+14. How can a wait-for graph detect deadlock?
+15. What is timeout-based deadlock handling?
+16. What is the difference between deadlock prevention and avoidance?
+17. How can transaction rollback resolve deadlock?
+18. What is starvation in DBMS?
+19. Differentiate between deadlock and starvation.
+20. Explain deadlock with a suitable example and methods for handling it.
+
+---
+
+# 12. Isolation Levels — 20 Questions
+
+1. What is transaction isolation?
+2. Why are isolation levels required?
+3. What are the standard isolation levels in DBMS?
+4. What is Read Uncommitted?
+5. What is Read Committed?
+6. What is Repeatable Read?
+7. What is Serializable isolation?
+8. What is a dirty read?
+9. What is a non-repeatable read?
+10. What is a phantom read?
+11. Which isolation level allows dirty reads?
+12. Which isolation level prevents dirty reads?
+13. Which isolation level prevents non-repeatable reads?
+14. Which isolation level provides the strongest standard isolation?
+15. Compare Read Uncommitted and Read Committed.
+16. Compare Repeatable Read and Serializable.
+17. Explain isolation levels using a practical example.
+18. What is the trade-off between isolation and performance?
+19. Create a table comparing all four isolation levels.
+20. Explain all standard isolation levels and the anomalies they prevent.
+
+---
+
+# 13. CAP Theorem — 20 Questions
+
+1. What is the CAP theorem?
+2. What does C represent in CAP?
+3. What does A represent in CAP?
+4. What does P represent in CAP?
+5. Explain Consistency in CAP theorem.
+6. Explain Availability in CAP theorem.
+7. Explain Partition Tolerance.
+8. Why can a distributed system not guarantee all three properties simultaneously during a network partition?
+9. What is a network partition?
+10. What is a CP system?
+11. What is an AP system?
+12. Can a distributed system be CA in practice?
+13. Compare CP and AP systems.
+14. Give an example of a CP-oriented database.
+15. Give an example of an AP-oriented database.
+16. What happens to availability in a CP system during a partition?
+17. What happens to consistency in an AP system during a partition?
+18. How is CAP theorem related to NoSQL databases?
+19. Explain CAP theorem with a real-world distributed-system example.
+20. Explain the CAP theorem with a suitable diagram.
+
+---
+
+# 14. Sharding — 20 Questions
+
+1. What is sharding in DBMS?
+2. Why is sharding used?
+3. What is a shard?
+4. What is horizontal sharding?
+5. What is vertical sharding?
+6. What is a shard key?
+7. What is hash-based sharding?
+8. What is range-based sharding?
+9. What is directory-based sharding?
+10. What are the advantages of sharding?
+11. What are the disadvantages of sharding?
+12. How does sharding improve scalability?
+13. How does sharding improve database performance?
+14. What problems can occur with a poor shard key?
+15. What is a hot shard?
+16. What is re-sharding?
+17. How is sharding different from partitioning?
+18. How does sharding work in distributed databases?
+19. Give a practical example of database sharding.
+20. Explain different sharding strategies with examples.
+
+---
+
+# 15. SQL vs NoSQL — 20 Questions
+
+1. What is SQL?
+2. What is NoSQL?
+3. Why are NoSQL databases used?
+4. What is a relational database?
+5. What is a non-relational database?
+6. What is the difference between SQL and NoSQL databases?
+7. Compare SQL and NoSQL data models.
+8. Compare SQL and NoSQL schema designs.
+9. How does SQL handle relationships?
+10. How does NoSQL handle relationships?
+11. Compare SQL and NoSQL scalability.
+12. Compare SQL and NoSQL consistency.
+13. What are the major types of NoSQL databases?
+14. What is a document database?
+15. What is a key-value database?
+16. What is a column-family database?
+17. What is a graph database?
+18. Give examples of SQL databases.
+19. Give examples of NoSQL databases.
+20. Compare SQL and NoSQL databases based on structure, scalability, consistency, relationships, and use cases.
+
+# OOPS Question Bank — 300 Questions
+
+## 1. Four Pillars of OOP — 20 Questions
+
+1. What is Object-Oriented Programming?
+2. What are the four pillars of OOP?
+3. What is encapsulation?
+4. What is abstraction?
+5. What is inheritance?
+6. What is polymorphism?
+7. Explain encapsulation with a real-world example.
+8. How is data hiding achieved using encapsulation?
+9. Explain abstraction with a suitable example.
+10. What is the difference between abstraction and encapsulation?
+11. Explain inheritance with an example.
+12. What are the different types of inheritance?
+13. Explain polymorphism with an example.
+14. What are compile-time and runtime polymorphism?
+15. How does OOP improve code reusability?
+16. How does OOP improve maintainability?
+17. Explain the relationship between abstraction and inheritance.
+18. Explain all four pillars using a real-world example.
+19. Differentiate between inheritance and polymorphism.
+20. Explain the four pillars of OOP with suitable programming examples.
+
+---
+
+# 2. Runtime vs Compile-Time Polymorphism — 20 Questions
+
+1. What is polymorphism?
+2. What is compile-time polymorphism?
+3. What is runtime polymorphism?
+4. How is compile-time polymorphism achieved?
+5. How is runtime polymorphism achieved?
+6. What is method overloading?
+7. What is method overriding?
+8. What is dynamic method dispatch?
+9. When is the method resolved in compile-time polymorphism?
+10. When is the method resolved in runtime polymorphism?
+11. Differentiate compile-time and runtime polymorphism.
+12. Give an example of compile-time polymorphism.
+13. Give an example of runtime polymorphism.
+14. What role does inheritance play in runtime polymorphism?
+15. Can runtime polymorphism exist without method overriding?
+16. What is early binding?
+17. What is late binding?
+18. Compare early binding and late binding.
+19. Explain runtime polymorphism using a parent and child class.
+20. Write a program demonstrating both types of polymorphism.
+
+---
+
+# 3. Method Overloading vs Overriding — 20 Questions
+
+1. What is method overloading?
+2. What is method overriding?
+3. Why is method overloading used?
+4. Why is method overriding used?
+5. What are the rules of method overloading?
+6. What are the rules of method overriding?
+7. Can overloaded methods have different return types?
+8. Can overridden methods have different return types?
+9. Can constructors be overloaded?
+10. Can constructors be overridden?
+11. Can static methods be overloaded?
+12. Can static methods be overridden?
+13. Can private methods be overridden?
+14. What is the difference between overloading and overriding?
+15. Explain method overloading with an example.
+16. Explain method overriding with an example.
+17. What is compile-time binding in overloading?
+18. What is runtime binding in overriding?
+19. Can a child class overload a parent-class method?
+20. Write a program demonstrating method overloading and overriding.
+
+---
+
+# 4. Interface vs Abstract Class — 20 Questions
+
+1. What is an interface?
+2. What is an abstract class?
+3. Why are interfaces used?
+4. Why are abstract classes used?
+5. Can an abstract class contain concrete methods?
+6. Can an interface contain implemented methods?
+7. Can an abstract class have a constructor?
+8. Can an interface have a constructor?
+9. Can an abstract class contain instance variables?
+10. Can an interface contain variables?
+11. Can a class implement multiple interfaces?
+12. Can a class extend multiple abstract classes?
+13. Differentiate between an interface and an abstract class.
+14. When should an interface be preferred?
+15. When should an abstract class be preferred?
+16. What is multiple inheritance through interfaces?
+17. Can an abstract class implement an interface?
+18. Can an interface extend another interface?
+19. Give a real-world example of an interface.
+20. Explain interface and abstract class with programming examples.
+
+---
+
+# 5. Association, Aggregation, Composition — 20 Questions
+
+1. What is association?
+2. What is aggregation?
+3. What is composition?
+4. What is the relationship between association and aggregation?
+5. What is the relationship between aggregation and composition?
+6. Explain a "has-a" relationship.
+7. Explain a "uses-a" relationship.
+8. Give a real-world example of association.
+9. Give a real-world example of aggregation.
+10. Give a real-world example of composition.
+11. What is weak ownership?
+12. What is strong ownership?
+13. What happens to contained objects when the owner is destroyed in aggregation?
+14. What happens to contained objects when the owner is destroyed in composition?
+15. Differentiate association and aggregation.
+16. Differentiate aggregation and composition.
+17. Draw a UML representation of aggregation.
+18. Draw a UML representation of composition.
+19. Explain all three relationships with examples.
+20. Write a program demonstrating composition.
+
+---
+
+# 6. SOLID Principles — 20 Questions
+
+1. What are SOLID principles?
+2. What does S represent in SOLID?
+3. What does O represent in SOLID?
+4. What does L represent in SOLID?
+5. What does I represent in SOLID?
+6. What does D represent in SOLID?
+7. Explain the Single Responsibility Principle.
+8. Explain the Open/Closed Principle.
+9. Explain the Liskov Substitution Principle.
+10. Explain the Interface Segregation Principle.
+11. Explain the Dependency Inversion Principle.
+12. Why are SOLID principles important?
+13. Give a real-world example of the Single Responsibility Principle.
+14. How does the Open/Closed Principle improve software design?
+15. What problem does the Liskov Substitution Principle prevent?
+16. How does Interface Segregation reduce unnecessary dependencies?
+17. Explain Dependency Inversion with an example.
+18. What are the benefits of following SOLID principles?
+19. Give an example of code violating one SOLID principle.
+20. Explain all five SOLID principles with suitable examples.
+
+---
+
+# 7. Constructor Chaining — 20 Questions
+
+1. What is a constructor?
+2. What is constructor chaining?
+3. Why is constructor chaining required?
+4. What is constructor overloading?
+5. How can one constructor call another constructor?
+6. What is the purpose of `this()`?
+7. What is the purpose of `super()`?
+8. What is the difference between `this()` and `super()`?
+9. Can constructors call other constructors?
+10. Can a child constructor call a parent constructor?
+11. What is the order of constructor execution in inheritance?
+12. Can `this()` and `super()` be used together in the same constructor?
+13. What happens if `super()` is not explicitly written?
+14. Explain constructor chaining within the same class.
+15. Explain constructor chaining between parent and child classes.
+16. Give a real-world example of constructor chaining.
+17. What is constructor invocation order?
+18. Can a constructor be inherited?
+19. Write a program demonstrating constructor chaining.
+20. Explain constructor chaining using `this()` and `super()`.
+
+---
+
+# 8. Object Cloning — Deep vs Shallow Copy — 20 Questions
+
+1. What is object cloning?
+2. Why is object cloning required?
+3. What is a shallow copy?
+4. What is a deep copy?
+5. What is the difference between shallow and deep copying?
+6. How does shallow copying handle primitive values?
+7. How does shallow copying handle reference variables?
+8. How does deep copying handle reference variables?
+9. What happens when a nested object is modified after shallow copying?
+10. What happens when a nested object is modified after deep copying?
+11. What is object identity?
+12. What is the difference between copying an object and assigning an object reference?
+13. Give a real-world example of shallow copying.
+14. Give a real-world example of deep copying.
+15. What are the advantages of shallow copying?
+16. What are the advantages of deep copying?
+17. What are the disadvantages of deep copying?
+18. When should deep copying be preferred?
+19. Explain shallow and deep copying using a nested object.
+20. Write a program demonstrating shallow copy and deep copy.
+
+---
+
+# 9. Static vs Instance Members — 20 Questions
+
+1. What is a static member?
+2. What is an instance member?
+3. What is a static variable?
+4. What is an instance variable?
+5. What is a static method?
+6. What is an instance method?
+7. How is a static variable shared among objects?
+8. How does an instance variable differ between objects?
+9. Can a static method access instance variables directly?
+10. Can an instance method access static variables?
+11. Can static methods be overridden?
+12. Can static methods be overloaded?
+13. When should static members be used?
+14. What is the memory difference between static and instance members?
+15. Give an example of a static variable.
+16. Give an example of an instance variable.
+17. What is a static block?
+18. When is a static block executed?
+19. Differentiate static and instance members.
+20. Write a program demonstrating static and instance members.
+
+---
+
+# 10. Access Modifiers — 20 Questions
+
+1. What are access modifiers?
+2. Why are access modifiers used?
+3. What is `public`?
+4. What is `private`?
+5. What is `protected`?
+6. What is default/package-private access?
+7. Which access modifier provides the highest accessibility?
+8. Which access modifier provides the most restricted accessibility?
+9. Can a private member be accessed outside its class?
+10. Can protected members be accessed by subclasses?
+11. Can a top-level class be private?
+12. Can constructors have access modifiers?
+13. How do access modifiers support encapsulation?
+14. Differentiate public and private members.
+15. Differentiate protected and private members.
+16. Explain default access with an example.
+17. Explain access modifiers in inheritance.
+18. Create a table comparing all major access modifiers.
+19. Give a real-world example of access control.
+20. Write a program demonstrating different access modifiers.
+
+---
+
+# 11. Diamond Problem — 20 Questions
+
+1. What is the diamond problem?
+2. Why does the diamond problem occur?
+3. Explain the diamond problem using a class hierarchy.
+4. How is the diamond problem related to multiple inheritance?
+5. What ambiguity occurs in the diamond problem?
+6. Why can multiple class inheritance cause method ambiguity?
+7. How do interfaces help handle the diamond problem?
+8. How can default methods in interfaces create ambiguity?
+9. How can interface-method conflicts be resolved?
+10. What is the role of method overriding in resolving ambiguity?
+11. Why does Java not support multiple inheritance of classes?
+12. How do languages such as C++ handle the diamond problem?
+13. What is virtual inheritance?
+14. Explain the diamond problem with a diagram.
+15. Explain the diamond problem with a real-world example.
+16. Can multiple interfaces create a diamond structure?
+17. How does Java resolve conflicting default methods?
+18. Differentiate multiple inheritance and multilevel inheritance.
+19. What are the disadvantages of multiple inheritance?
+20. Explain the diamond problem and its possible solutions.
+
+---
+
+# 12. Dependency Injection — 20 Questions
+
+1. What is dependency injection?
+2. What is a dependency in OOP?
+3. Why is dependency injection used?
+4. What is dependency inversion?
+5. What is constructor injection?
+6. What is setter injection?
+7. What is method injection?
+8. Differentiate dependency injection and dependency inversion.
+9. What is tight coupling?
+10. What is loose coupling?
+11. How does dependency injection reduce coupling?
+12. What are the benefits of dependency injection?
+13. What are the disadvantages of dependency injection?
+14. Explain constructor injection with an example.
+15. Explain setter injection with an example.
+16. Give a real-world example of dependency injection.
+17. How does dependency injection improve testability?
+18. How does dependency injection support SOLID principles?
+19. Explain dependency injection using an interface.
+20. Write a program demonstrating dependency injection.
+
+---
+
+# 13. Cohesion vs Coupling — 20 Questions
+
+1. What is cohesion?
+2. What is coupling?
+3. Why is high cohesion desirable?
+4. Why is low coupling desirable?
+5. What is high cohesion?
+6. What is low cohesion?
+7. What is tight coupling?
+8. What is loose coupling?
+9. How does coupling affect maintainability?
+10. How does cohesion affect software quality?
+11. Differentiate cohesion and coupling.
+12. Give an example of high cohesion.
+13. Give an example of low cohesion.
+14. Give an example of tight coupling.
+15. Give an example of loose coupling.
+16. How can dependency injection reduce coupling?
+17. How can class responsibilities improve cohesion?
+18. What is the relationship between cohesion and the Single Responsibility Principle?
+19. Explain why good OOP design aims for high cohesion and low coupling.
+20. Compare cohesion and coupling with suitable examples.
+
+---
+
+# 14. Immutable Objects — 20 Questions
+
+1. What is an immutable object?
+2. What does immutability mean?
+3. Give an example of an immutable class.
+4. What are the advantages of immutable objects?
+5. What are the disadvantages of immutable objects?
+6. Why are immutable objects useful in multithreaded applications?
+7. How can a class be made immutable?
+8. Why should fields of an immutable class generally be private?
+9. Why should fields of an immutable class generally be final?
+10. Why should an immutable class avoid setter methods?
+11. Why should mutable references be handled carefully?
+12. What is defensive copying?
+13. What is the difference between immutable and mutable objects?
+14. Is a `final` reference automatically an immutable object?
+15. Why is String commonly used as an example of immutability?
+16. What happens when an immutable object appears to be modified?
+17. What are the benefits of immutability for security?
+18. What are the benefits of immutability for caching?
+19. Write a class representing an immutable object.
+20. Explain how to design a fully immutable class.
+
+---
+
+# 15. Design Patterns — Singleton, Factory, Strategy — 20 Questions
+
+### Singleton
+
+1. What is a design pattern?
+2. What is the Singleton design pattern?
+3. Why is Singleton used?
+4. How can a Singleton class be created?
+5. What is the purpose of a private constructor in Singleton?
+6. What are the advantages and disadvantages of Singleton?
+
+### Factory
+
+7. What is the Factory design pattern?
+8. Why is the Factory pattern used?
+9. What problem does the Factory pattern solve?
+10. What is a factory method?
+11. Give a real-world example of the Factory pattern.
+12. How does Factory reduce object-creation dependency?
+
+### Strategy
+
+13. What is the Strategy design pattern?
+14. Why is the Strategy pattern used?
+15. What problem does Strategy solve?
+16. Explain Strategy using a payment-system example.
+17. How does Strategy support the Open/Closed Principle?
+18. Differentiate Factory and Strategy patterns.
+19. Differentiate Singleton and Factory patterns.
+20. Explain Singleton, Factory, and Strategy patterns with suitable UML diagrams and programming examples.
+
+# Computer Networks Question Bank — 300 Questions
+
+## 1. TCP vs UDP — 20 Questions
+
+1. What is TCP?
+2. What is UDP?
+3. What is the main difference between TCP and UDP?
+4. Is TCP connection-oriented or connectionless?
+5. Is UDP connection-oriented or connectionless?
+6. Explain the reliability mechanism of TCP.
+7. Why is UDP considered faster than TCP?
+8. What is the TCP three-way handshake?
+9. Does UDP perform a handshake?
+10. What is TCP flow control?
+11. What is TCP congestion control?
+12. What is the TCP sequence number?
+13. What is an acknowledgment number in TCP?
+14. What is the TCP header?
+15. What is the UDP header?
+16. Compare TCP and UDP based on reliability, speed, ordering, and connection.
+17. Why is TCP used for HTTP/HTTPS?
+18. Why is UDP commonly used for DNS, streaming, and gaming?
+19. What are the advantages and disadvantages of TCP?
+20. Compare TCP and UDP with suitable real-world applications.
+
+---
+
+# 2. OSI Model — 20 Questions
+
+1. What is the OSI model?
+2. Why was the OSI model developed?
+3. How many layers are present in the OSI model?
+4. Name all seven OSI layers.
+5. Explain the Physical layer.
+6. Explain the Data Link layer.
+7. Explain the Network layer.
+8. Explain the Transport layer.
+9. Explain the Session layer.
+10. Explain the Presentation layer.
+11. Explain the Application layer.
+12. What is encapsulation in the OSI model?
+13. What is decapsulation?
+14. What are the major protocols associated with each OSI layer?
+15. Which OSI layer is responsible for routing?
+16. Which OSI layer provides end-to-end communication?
+17. Which OSI layer is responsible for encryption and data formatting?
+18. Compare the OSI layers with their major functions.
+19. Explain how data travels through all seven OSI layers.
+20. Draw and explain the complete OSI model.
+
+---
+
+# 3. TCP/IP Model — 20 Questions
+
+1. What is the TCP/IP model?
+2. Why is the TCP/IP model important?
+3. How many layers are present in the TCP/IP model?
+4. Name the layers of the TCP/IP model.
+5. Explain the Application layer.
+6. Explain the Transport layer.
+7. Explain the Internet layer.
+8. Explain the Network Access layer.
+9. What protocols operate at the Transport layer?
+10. What protocols operate at the Internet layer?
+11. What is the role of IP?
+12. What is the role of TCP?
+13. What is the role of UDP?
+14. Compare OSI and TCP/IP models.
+15. How are the OSI and TCP/IP layers mapped?
+16. What is encapsulation in TCP/IP?
+17. Explain the process of sending data using TCP/IP.
+18. Which TCP/IP layer is responsible for routing?
+19. Why is TCP/IP widely used on the Internet?
+20. Draw and explain the TCP/IP model.
+
+---
+
+# 4. Three-Way Handshake — 20 Questions
+
+1. What is the TCP three-way handshake?
+2. Why is the three-way handshake required?
+3. What are the three steps of the TCP handshake?
+4. What is the SYN flag?
+5. What is the ACK flag?
+6. What happens during the first step of the handshake?
+7. What happens during the second step?
+8. What happens during the third step?
+9. What is an initial sequence number?
+10. Why does TCP use sequence numbers?
+11. Why does the client send SYN?
+12. Why does the server send SYN-ACK?
+13. Why does the client send ACK?
+14. What happens if the SYN packet is lost?
+15. What happens if the SYN-ACK packet is lost?
+16. What happens if the final ACK is lost?
+17. How does the handshake establish a reliable connection?
+18. Draw the TCP three-way handshake diagram.
+19. Explain the three-way handshake using client-server communication.
+20. Explain the complete TCP connection-establishment process.
+
+---
+
+# 5. Four-Way Connection Termination — 20 Questions
+
+1. What is TCP connection termination?
+2. Why does TCP normally use four steps to terminate a connection?
+3. What is the FIN flag?
+4. What is the ACK flag during connection termination?
+5. Explain the first step of TCP termination.
+6. Explain the second step.
+7. Explain the third step.
+8. Explain the fourth step.
+9. Why are FIN and ACK handled separately?
+10. What is the TIME_WAIT state?
+11. Why does the TCP connection enter TIME_WAIT?
+12. What happens if a FIN packet is lost?
+13. What happens if an ACK packet is lost?
+14. What happens if the final FIN is lost?
+15. What is the difference between TCP connection establishment and termination?
+16. What are the TCP states involved in termination?
+17. Explain active close and passive close.
+18. Draw the four-way TCP termination diagram.
+19. Explain TCP termination with a client-server example.
+20. Compare three-way handshake and four-way termination.
+
+---
+
+# 6. HTTP vs HTTPS — 20 Questions
+
+1. What is HTTP?
+2. What is HTTPS?
+3. What does HTTPS stand for?
+4. What is the default port of HTTP?
+5. What is the default port of HTTPS?
+6. Why is HTTPS more secure than HTTP?
+7. What is encryption in HTTPS?
+8. What is the role of TLS in HTTPS?
+9. How does HTTPS protect data from attackers?
+10. What is a digital certificate?
+11. Who issues digital certificates?
+12. What is the role of a Certificate Authority?
+13. Does HTTP provide encryption?
+14. What happens when a browser connects to an HTTPS website?
+15. What is an HTTP request?
+16. What is an HTTP response?
+17. Compare HTTP and HTTPS.
+18. What is HTTP Strict Transport Security (HSTS)?
+19. Why should login and payment pages use HTTPS?
+20. Explain the complete HTTPS communication process.
+
+---
+
+# 7. DNS Working — 20 Questions
+
+1. What is DNS?
+2. Why is DNS required?
+3. What does DNS stand for?
+4. What is a domain name?
+5. What is an IP address?
+6. How does DNS convert a domain name into an IP address?
+7. What is a DNS resolver?
+8. What is a DNS root server?
+9. What is a TLD server?
+10. What is an authoritative DNS server?
+11. What is DNS caching?
+12. What is TTL in DNS?
+13. What is an A record?
+14. What is an AAAA record?
+15. What is a CNAME record?
+16. What is an MX record?
+17. What happens when you enter a website name in the browser?
+18. Explain recursive and iterative DNS queries.
+19. Draw and explain the DNS resolution process.
+20. Explain step-by-step how DNS resolves `google.com`.
+
+---
+
+# 8. Load Balancer — 20 Questions
+
+1. What is a load balancer?
+2. Why is load balancing required?
+3. What is a server pool?
+4. What is the role of a load balancer in a web application?
+5. What is horizontal scaling?
+6. What is vertical scaling?
+7. What is round-robin load balancing?
+8. What is weighted round-robin?
+9. What is least-connections load balancing?
+10. What is IP-hash load balancing?
+11. What is health checking?
+12. What happens when a backend server fails?
+13. What is a Layer 4 load balancer?
+14. What is a Layer 7 load balancer?
+15. Compare Layer 4 and Layer 7 load balancing.
+16. What is session persistence or sticky session?
+17. What are the advantages of load balancing?
+18. What are the disadvantages of load balancing?
+19. Explain load balancing with a real-world web application.
+20. Draw and explain a load-balanced architecture.
+
+---
+
+# 9. Reverse Proxy — 20 Questions
+
+1. What is a reverse proxy?
+2. How does a reverse proxy work?
+3. Why is a reverse proxy used?
+4. What is the difference between a forward proxy and reverse proxy?
+5. Where is a reverse proxy placed in a web architecture?
+6. How does a reverse proxy hide backend servers?
+7. How can a reverse proxy improve security?
+8. How can a reverse proxy perform load balancing?
+9. How can a reverse proxy perform caching?
+10. What is SSL/TLS termination?
+11. What is Nginx?
+12. How can Nginx act as a reverse proxy?
+13. What is Apache HTTP Server?
+14. Can a reverse proxy route requests based on URL paths?
+15. What is the relationship between reverse proxy and load balancer?
+16. Can a reverse proxy serve static files?
+17. What are the advantages of reverse proxies?
+18. What are the disadvantages of reverse proxies?
+19. Explain reverse proxy using a web-server example.
+20. Draw and explain a reverse-proxy architecture.
+
+---
+
+# 10. SSL/TLS — 20 Questions
+
+1. What is SSL?
+2. What is TLS?
+3. Why was TLS introduced?
+4. What is the purpose of SSL/TLS?
+5. What is encryption?
+6. What is symmetric encryption?
+7. What is asymmetric encryption?
+8. What is a digital certificate?
+9. What is a Certificate Authority?
+10. What is the TLS handshake?
+11. What happens during a TLS handshake?
+12. What is a session key?
+13. Why does TLS use both asymmetric and symmetric cryptography?
+14. How does TLS provide confidentiality?
+15. How does TLS provide integrity?
+16. How does TLS authenticate a server?
+17. What is certificate validation?
+18. What is the difference between SSL and TLS?
+19. Explain how HTTPS uses TLS.
+20. Explain the complete TLS handshake with a suitable diagram.
+
+---
+
+# 11. Cookies vs Sessions — 20 Questions
+
+1. What is a cookie?
+2. What is a session?
+3. Why are cookies used?
+4. Why are sessions used?
+5. Where are cookies stored?
+6. Where is session data generally stored?
+7. What is a session ID?
+8. How does a browser send cookies to a server?
+9. What is an HTTP-only cookie?
+10. What is a Secure cookie?
+11. What is the SameSite cookie attribute?
+12. What is cookie expiration?
+13. What is session expiration?
+14. How does a login system use cookies and sessions?
+15. What is session hijacking?
+16. How can cookies be secured?
+17. Differentiate cookies and sessions.
+18. What happens when a user closes the browser?
+19. Explain cookies and sessions using an authentication example.
+20. Compare cookies and sessions based on storage, security, lifetime, and usage.
+
+---
+
+# 12. REST APIs — 20 Questions
+
+1. What is an API?
+2. What is REST?
+3. What is a REST API?
+4. What are the main principles of REST?
+5. What is a resource in REST?
+6. What is a URI?
+7. What is the HTTP GET method?
+8. What is the HTTP POST method?
+9. What is the HTTP PUT method?
+10. What is the HTTP PATCH method?
+11. What is the HTTP DELETE method?
+12. What is a stateless API?
+13. What is JSON?
+14. What are HTTP status codes?
+15. Explain common HTTP status codes such as 200, 201, 400, 401, 403, 404, and 500.
+16. What is the difference between PUT and PATCH?
+17. What is authentication in REST APIs?
+18. What is authorization in REST APIs?
+19. Design REST endpoints for a student-management system.
+20. Explain the complete request-response cycle of a REST API.
+
+---
+
+# 13. WebSocket — 20 Questions
+
+1. What is WebSocket?
+2. Why is WebSocket used?
+3. How is WebSocket different from HTTP?
+4. Is WebSocket connection-oriented?
+5. What is a persistent connection?
+6. What is the WebSocket handshake?
+7. How does HTTP upgrade to WebSocket?
+8. What is full-duplex communication?
+9. Why is WebSocket suitable for real-time applications?
+10. What is the WebSocket protocol?
+11. What is the difference between `ws://` and `wss://`?
+12. What is a WebSocket frame?
+13. How does WebSocket reduce repeated HTTP requests?
+14. What happens when a WebSocket connection is closed?
+15. What are common applications of WebSocket?
+16. How can WebSocket be used for chat applications?
+17. How can WebSocket be used for live notifications?
+18. Compare WebSocket and REST API.
+19. Explain the WebSocket connection-establishment process.
+20. Design a simple real-time chat architecture using WebSocket.
+
+---
+
+# 14. CDN — 20 Questions
+
+1. What is a CDN?
+2. What does CDN stand for?
+3. Why are CDNs used?
+4. What is a CDN edge server?
+5. What is an origin server?
+6. What is CDN caching?
+7. What is cache hit?
+8. What is cache miss?
+9. How does a CDN reduce latency?
+10. How does a CDN reduce load on the origin server?
+11. What type of content can a CDN cache?
+12. Can a CDN cache dynamic content?
+13. What is an edge location?
+14. What is CDN cache invalidation?
+15. What is a CDN distribution?
+16. How does DNS help route users to a CDN?
+17. What are the benefits of using a CDN?
+18. What are the limitations of a CDN?
+19. Explain CDN operation with a website example.
+20. Draw and explain a CDN architecture.
+
+---
+
+# 15. How Browser Opens Google.com — 20 Questions
+
+1. What happens when you enter `google.com` in a browser?
+2. What is the first step performed by the browser?
+3. What is DNS resolution?
+4. How does the browser find Google's IP address?
+5. What is DNS caching?
+6. What is the role of the operating-system DNS cache?
+7. What is the role of the browser cache?
+8. How does TCP establish a connection with the server?
+9. When is the TCP three-way handshake performed?
+10. When does TLS handshake occur?
+11. How does HTTPS secure the connection?
+12. What HTTP request does the browser send?
+13. What happens when the server receives the request?
+14. What is the role of a load balancer?
+15. What is the role of a reverse proxy?
+16. How does the browser receive the HTTP response?
+17. How does the browser process HTML?
+18. How are CSS, JavaScript, images, and other resources loaded?
+19. What is the rendering process performed by the browser?
+20. Explain the **complete journey from entering `google.com` to seeing the webpage**, including DNS, TCP, TLS, HTTP/HTTPS, servers, and browser rendering.
+
+# Operating System Question Bank — 300 Questions
+
+## 1. Process vs Thread — 20 Questions
+
+1. What is a process?
+2. What is a thread?
+3. What are the main differences between a process and a thread?
+4. What is a Process Control Block (PCB)?
+5. What information is stored in a PCB?
+6. What is a Thread Control Block (TCB)?
+7. How is memory shared between threads?
+8. Do processes share their address space?
+9. Why are threads called lightweight processes?
+10. Which is faster to create: a process or a thread?
+11. Compare process and thread context switching.
+12. What are the advantages of using processes?
+13. What are the advantages of using threads?
+14. What is inter-process communication?
+15. How do threads communicate with each other?
+16. What is a multithreaded process?
+17. What happens if one thread of a process terminates?
+18. Compare process and thread based on memory, creation, communication, and isolation.
+19. Give real-world examples of processes and threads.
+20. Explain process vs thread with a suitable diagram.
+
+---
+
+# 2. Context Switching — 20 Questions
+
+1. What is context switching?
+2. Why is context switching required?
+3. What is a process context?
+4. What information is saved during context switching?
+5. What is the role of the Process Control Block during context switching?
+6. What is the difference between process and thread context switching?
+7. What causes a context switch?
+8. What is a dispatcher?
+9. What is dispatch latency?
+10. How does context switching affect CPU performance?
+11. What happens during a process context switch?
+12. What happens during a thread context switch?
+13. Why is context switching considered overhead?
+14. How can context-switching overhead be reduced?
+15. What is the relationship between scheduling and context switching?
+16. Can context switching occur without a process terminating?
+17. What is hardware-assisted context switching?
+18. Explain context switching with a practical example.
+19. Draw the steps involved in context switching.
+20. Explain process context switching in detail.
+
+---
+
+# 3. Multithreading — 20 Questions
+
+1. What is multithreading?
+2. Why is multithreading used?
+3. What is a single-threaded process?
+4. What is a multithreaded process?
+5. What are the advantages of multithreading?
+6. What are the disadvantages of multithreading?
+7. How does multithreading improve responsiveness?
+8. How does multithreading improve CPU utilization?
+9. What is user-level threading?
+10. What is kernel-level threading?
+11. Compare user-level and kernel-level threads.
+12. What is the many-to-one threading model?
+13. What is the one-to-one threading model?
+14. What is the many-to-many threading model?
+15. What is thread synchronization?
+16. What problems can occur in multithreaded programs?
+17. What is thread starvation?
+18. What is a thread pool?
+19. Give real-world applications of multithreading.
+20. Explain multithreading models with suitable diagrams.
+
+---
+
+# 4. Scheduling Algorithms — 20 Questions
+
+1. What is CPU scheduling?
+2. Why is CPU scheduling required?
+3. What is a scheduler?
+4. What is the difference between preemptive and non-preemptive scheduling?
+5. What is First Come First Serve (FCFS)?
+6. What is Shortest Job First (SJF)?
+7. What is Shortest Remaining Time First (SRTF)?
+8. What is Round Robin scheduling?
+9. What is Priority Scheduling?
+10. What is Multilevel Queue Scheduling?
+11. What is Multilevel Feedback Queue Scheduling?
+12. What is waiting time?
+13. What is turnaround time?
+14. What is response time?
+15. What is completion time?
+16. What is throughput in CPU scheduling?
+17. What is CPU utilization?
+18. Calculate average waiting and turnaround time for a given set of processes using FCFS.
+19. Compare FCFS, SJF, SRTF, Round Robin, and Priority Scheduling.
+20. Solve a scheduling problem using Gantt charts and calculate waiting and turnaround times.
+
+---
+
+# 5. Deadlock — 20 Questions
+
+1. What is deadlock?
+2. Why does deadlock occur?
+3. What are the four necessary conditions for deadlock?
+4. Explain mutual exclusion.
+5. Explain hold and wait.
+6. Explain no preemption.
+7. Explain circular wait.
+8. What is deadlock prevention?
+9. What is deadlock avoidance?
+10. What is deadlock detection?
+11. What is deadlock recovery?
+12. What is the Resource Allocation Graph?
+13. How can a Resource Allocation Graph represent deadlock?
+14. What is the Banker's Algorithm?
+15. What are safe and unsafe states?
+16. What is a safe sequence?
+17. Differentiate deadlock prevention and deadlock avoidance.
+18. Differentiate deadlock and starvation.
+19. Solve a deadlock problem using the Banker's Algorithm.
+20. Explain deadlock detection and recovery with suitable examples.
+
+---
+
+# 6. Starvation — 20 Questions
+
+1. What is starvation in an operating system?
+2. Why does starvation occur?
+3. How is starvation related to CPU scheduling?
+4. Which scheduling algorithms can cause starvation?
+5. What is indefinite blocking?
+6. How can Priority Scheduling cause starvation?
+7. What is aging in CPU scheduling?
+8. How does aging prevent starvation?
+9. What is the difference between starvation and deadlock?
+10. Can starvation occur without deadlock?
+11. Can deadlock cause starvation?
+12. Give a real-world example of starvation.
+13. How does priority aging work?
+14. What is resource starvation?
+15. What is CPU starvation?
+16. How can operating systems detect starvation?
+17. How can scheduling policies prevent starvation?
+18. Compare starvation and deadlock.
+19. Explain starvation using a scheduling example.
+20. Explain methods for preventing starvation.
+
+---
+
+# 7. Race Condition — 20 Questions
+
+1. What is a race condition?
+2. Why does a race condition occur?
+3. What is a critical section?
+4. What is a shared resource?
+5. Give an example of a race condition.
+6. How does concurrent execution cause race conditions?
+7. What is mutual exclusion?
+8. How can race conditions affect data?
+9. What is the critical-section problem?
+10. What are the requirements for solving the critical-section problem?
+11. What is atomicity?
+12. How can mutexes prevent race conditions?
+13. How can semaphores prevent race conditions?
+14. What is a data race?
+15. What is the difference between race condition and deadlock?
+16. Can race conditions occur in single-threaded programs?
+17. How can race conditions be detected?
+18. How can synchronization prevent race conditions?
+19. Explain race condition using a bank-account example.
+20. Write or explain a program that demonstrates and fixes a race condition.
+
+---
+
+# 8. Mutex — 20 Questions
+
+1. What is a mutex?
+2. What does mutex stand for?
+3. Why is a mutex required?
+4. What is mutual exclusion?
+5. How does a mutex protect a critical section?
+6. What is mutex lock?
+7. What is mutex unlock?
+8. What happens if a thread tries to lock an already locked mutex?
+9. What is a recursive mutex?
+10. What is mutex ownership?
+11. Can multiple threads hold the same mutex simultaneously?
+12. How does a mutex prevent race conditions?
+13. What happens if a thread forgets to unlock a mutex?
+14. Can improper mutex usage cause deadlock?
+15. What is the difference between mutex and semaphore?
+16. What is the difference between mutex and spinlock?
+17. What are the advantages of mutexes?
+18. What are the disadvantages of mutexes?
+19. Explain mutex using a shared-counter example.
+20. Explain how a mutex is used to protect a critical section.
+
+---
+
+# 9. Semaphore — 20 Questions
+
+1. What is a semaphore?
+2. Why are semaphores used?
+3. What are the types of semaphores?
+4. What is a binary semaphore?
+5. What is a counting semaphore?
+6. What is the wait operation?
+7. What is the signal operation?
+8. What is the relationship between wait and signal operations?
+9. How does a semaphore provide synchronization?
+10. How can semaphores solve the critical-section problem?
+11. How can semaphores prevent race conditions?
+12. What is the difference between a semaphore and a mutex?
+13. Can a semaphore have a value greater than one?
+14. What is a counting semaphore used for?
+15. Explain semaphore using the producer-consumer problem.
+16. What is semaphore initialization?
+17. What happens when a semaphore value becomes zero?
+18. What are the disadvantages of semaphores?
+19. Explain binary and counting semaphores with examples.
+20. Explain semaphore operations with a suitable diagram or example.
+
+---
+
+# 10. Paging — 20 Questions
+
+1. What is paging?
+2. Why is paging used in operating systems?
+3. What is a page?
+4. What is a frame?
+5. What is a page table?
+6. What is a page number?
+7. What is a page offset?
+8. How is a logical address divided in paging?
+9. How is a physical address generated using a page table?
+10. What is page-table mapping?
+11. What is internal fragmentation in paging?
+12. What is a Translation Lookaside Buffer (TLB)?
+13. Why is TLB used?
+14. What is a page fault?
+15. What happens when a page fault occurs?
+16. What is demand paging?
+17. What is the difference between paging and segmentation?
+18. Calculate physical address from a given logical address and page table.
+19. What are the advantages and disadvantages of paging?
+20. Explain paging with a suitable address-translation diagram.
+
+---
+
+# 11. Segmentation — 20 Questions
+
+1. What is segmentation?
+2. Why is segmentation used?
+3. What is a segment?
+4. What is a segment table?
+5. What is a segment number?
+6. What is an offset in segmentation?
+7. What information is stored in a segment table?
+8. How is a logical address represented in segmentation?
+9. How is a physical address calculated using segmentation?
+10. What is external fragmentation?
+11. How does segmentation differ from paging?
+12. What are the advantages of segmentation?
+13. What are the disadvantages of segmentation?
+14. What is segment protection?
+15. What is segment sharing?
+16. Can segments have different sizes?
+17. Solve a physical-address calculation using a segment table.
+18. Compare paging and segmentation.
+19. Explain segmentation using a real-world memory example.
+20. Draw and explain the segmentation memory-management scheme.
+
+---
+
+# 12. Virtual Memory — 20 Questions
+
+1. What is virtual memory?
+2. Why is virtual memory required?
+3. How does virtual memory work?
+4. What is demand paging?
+5. What is a page fault?
+6. What is a backing store?
+7. What is swapping?
+8. What is page replacement?
+9. What is the working set?
+10. What is thrashing?
+11. Why does thrashing occur?
+12. How can thrashing be prevented?
+13. What is locality of reference?
+14. What is the difference between virtual and physical memory?
+15. What is the role of the MMU in virtual memory?
+16. What is the role of TLB in virtual memory?
+17. What are the advantages of virtual memory?
+18. What are the disadvantages of virtual memory?
+19. Explain virtual memory using a practical example.
+20. Explain the complete virtual-memory system with a suitable diagram.
+
+---
+
+# 13. Heap vs Stack — 20 Questions
+
+1. What is stack memory?
+2. What is heap memory?
+3. What type of data is generally stored on the stack?
+4. What type of data is generally stored on the heap?
+5. How is stack memory allocated?
+6. How is heap memory allocated?
+7. Which is generally faster: stack or heap?
+8. What is stack overflow?
+9. What is heap overflow?
+10. What is dynamic memory allocation?
+11. What happens to stack memory when a function returns?
+12. What happens to dynamically allocated heap memory?
+13. What is a stack frame?
+14. What is a memory leak?
+15. What is fragmentation in heap memory?
+16. Compare heap and stack based on speed and lifetime.
+17. What are the advantages of stack memory?
+18. What are the advantages of heap memory?
+19. Explain heap and stack using a function-call example.
+20. Compare heap and stack memory with a suitable diagram.
+
+---
+
+# 14. Memory Allocation — 20 Questions
+
+1. What is memory allocation?
+2. Why is memory allocation required?
+3. What is static memory allocation?
+4. What is dynamic memory allocation?
+5. What is contiguous memory allocation?
+6. What is non-contiguous memory allocation?
+7. What is fixed partitioning?
+8. What is variable partitioning?
+9. What is internal fragmentation?
+10. What is external fragmentation?
+11. What is first-fit allocation?
+12. What is best-fit allocation?
+13. What is worst-fit allocation?
+14. Compare first-fit, best-fit, and worst-fit.
+15. What is compaction?
+16. How does compaction reduce external fragmentation?
+17. What is buddy-system memory allocation?
+18. Solve a memory-allocation problem using first-fit.
+19. Solve a memory-allocation problem using best-fit and worst-fit.
+20. Explain different memory-allocation techniques with examples.
+
+---
+
+# 15. Garbage Collection — 20 Questions
+
+1. What is garbage collection?
+2. Why is garbage collection required?
+3. What is garbage in memory?
+4. What is an unreachable object?
+5. How does garbage collection work?
+6. What is automatic memory management?
+7. What is manual memory management?
+8. What is reference counting?
+9. What is mark-and-sweep garbage collection?
+10. What is mark-and-compact garbage collection?
+11. What is copying garbage collection?
+12. What is generational garbage collection?
+13. What is a garbage collector root?
+14. What is a memory leak?
+15. Can garbage collection completely eliminate memory leaks?
+16. What are the advantages of garbage collection?
+17. What are the disadvantages of garbage collection?
+18. How does garbage collection affect application performance?
+19. Compare reference counting and mark-and-sweep.
+20. Explain the garbage-collection process with a suitable example.
+
+
+* **C++:** 10 × 20 = **200 questions**
+* **Java:** 10 × 20 = **200 questions**
+
+# Language Core — C++ Question Bank
+
+## 1. Stack vs Heap Memory — 20 Questions
+
+1. What is stack memory in C++?
+2. What is heap memory in C++?
+3. What type of data is generally stored on the stack?
+4. What type of data is generally stored on the heap?
+5. How is stack memory allocated?
+6. How is heap memory allocated?
+7. Which is generally faster, stack or heap?
+8. What is the lifetime of a stack variable?
+9. What is the lifetime of dynamically allocated memory?
+10. What is stack overflow?
+11. What causes heap fragmentation?
+12. What is dynamic memory allocation?
+13. What are `new` and `delete`?
+14. What happens if dynamically allocated memory is not deleted?
+15. What is RAII in C++?
+16. How do local variables differ from dynamically allocated variables?
+17. Compare stack and heap in terms of speed, size, and lifetime.
+18. Why is stack memory automatically released?
+19. Give an example where heap allocation is required.
+20. Explain stack and heap memory with a suitable diagram and C++ example.
+
+---
+
+## 2. Compile-Time vs Runtime Polymorphism — 20 Questions
+
+1. What is polymorphism in C++?
+2. What is compile-time polymorphism?
+3. What is runtime polymorphism?
+4. How is compile-time polymorphism achieved in C++?
+5. How is runtime polymorphism achieved?
+6. What is function overloading?
+7. What is operator overloading?
+8. What is function overriding?
+9. What is a virtual function?
+10. What is dynamic binding?
+11. What is static binding?
+12. Differentiate early binding and late binding.
+13. Can function overloading provide runtime polymorphism?
+14. What role does inheritance play in runtime polymorphism?
+15. What is a pure virtual function?
+16. What is an abstract class?
+17. Compare compile-time and runtime polymorphism.
+18. Give a practical example of compile-time polymorphism.
+19. Give a practical example of runtime polymorphism.
+20. Write a C++ program demonstrating both types of polymorphism.
+
+---
+
+## 3. What Happens During Compilation in C++? — 20 Questions
+
+1. What is compilation?
+2. What are the major stages of C++ program compilation?
+3. What is preprocessing?
+4. What does the preprocessor do?
+5. What is the role of `#include`?
+6. What are macros?
+7. What happens during compilation?
+8. What is an object file?
+9. What is linking?
+10. What is the role of the linker?
+11. What is an executable file?
+12. What is the difference between a compiler and linker?
+13. What are syntax errors?
+14. What are semantic errors?
+15. What are linker errors?
+16. What is static linking?
+17. What is dynamic linking?
+18. Explain the complete C++ compilation pipeline.
+19. What happens to header files during preprocessing?
+20. Explain source code → preprocessing → compilation → assembly → linking → executable.
+
+---
+
+## 4. Virtual Function and Vtable — 20 Questions
+
+1. What is a virtual function?
+2. Why are virtual functions used?
+3. What is runtime polymorphism?
+4. What is a vtable?
+5. What is a vptr?
+6. When is a vtable generally created?
+7. How does a virtual function call work?
+8. What is dynamic dispatch?
+9. What happens when a base-class pointer points to a derived object?
+10. Why should a base class destructor sometimes be virtual?
+11. What is a pure virtual function?
+12. What is an abstract class?
+13. Can constructors be virtual?
+14. Can destructors be virtual?
+15. What is the performance cost of virtual functions?
+16. What is the difference between virtual and non-virtual functions?
+17. Explain vtable and vptr using an inheritance example.
+18. What happens internally during a virtual function call?
+19. Can static functions be virtual?
+20. Write a C++ program demonstrating virtual functions and explain how the vtable is involved.
+
+---
+
+## 5. Shallow Copy vs Deep Copy — 20 Questions
+
+1. What is object copying?
+2. What is a shallow copy?
+3. What is a deep copy?
+4. What happens to pointer members during shallow copying?
+5. Why can shallow copying cause problems?
+6. What is a copy constructor?
+7. When is a copy constructor called?
+8. What is the default copy constructor?
+9. How can a deep copy be implemented in C++?
+10. What is double deletion?
+11. What is a dangling pointer?
+12. How can deep copying prevent shared ownership problems?
+13. What is the Rule of Three?
+14. What is the Rule of Five?
+15. Compare shallow and deep copy.
+16. Give an example of a shallow-copy problem.
+17. Give an example of deep copying.
+18. How does dynamic memory affect object copying?
+19. Write a class with a custom deep-copy constructor.
+20. Explain shallow and deep copy with a suitable diagram.
+
+---
+
+## 6. Copy Constructor vs Move Constructor — 20 Questions
+
+1. What is a copy constructor?
+2. What is a move constructor?
+3. Why was the move constructor introduced?
+4. What is an rvalue reference?
+5. What is the purpose of `&&` in C++?
+6. When is a copy constructor called?
+7. When is a move constructor called?
+8. What is move semantics?
+9. How does move construction improve performance?
+10. What happens to the source object after moving?
+11. What is `std::move()`?
+12. Does `std::move()` itself move an object?
+13. What is copy elision?
+14. What is Return Value Optimization?
+15. Compare copying and moving resources.
+16. What is the Rule of Five?
+17. Why should a moved-from object remain valid?
+18. Give a practical example of move semantics.
+19. Write a class implementing copy and move constructors.
+20. Compare copy constructor and move constructor with a C++ example.
+
+---
+
+## 7. Smart Pointers — 20 Questions
+
+1. What are smart pointers?
+2. Why are smart pointers required?
+3. What is `unique_ptr`?
+4. What is `shared_ptr`?
+5. What is `weak_ptr`?
+6. How does `unique_ptr` provide exclusive ownership?
+7. How does `shared_ptr` implement shared ownership?
+8. What is reference counting?
+9. What is a cyclic reference?
+10. How does `weak_ptr` help prevent cyclic references?
+11. What is RAII?
+12. What is `make_unique()`?
+13. What is `make_shared()`?
+14. Can a `unique_ptr` be copied?
+15. Can a `unique_ptr` be moved?
+16. What happens when the last `shared_ptr` is destroyed?
+17. Compare `unique_ptr`, `shared_ptr`, and `weak_ptr`.
+18. What are the disadvantages of raw pointers?
+19. Write a C++ example using `unique_ptr`.
+20. Explain smart pointers and their ownership models.
+
+---
+
+## 8. Process vs Thread in C++ — 20 Questions
+
+1. What is a process?
+2. What is a thread?
+3. What is the difference between a process and a thread?
+4. Why are threads called lightweight?
+5. Do threads share memory?
+6. Do processes share the same address space?
+7. What is process creation?
+8. What is thread creation?
+9. Why are threads generally cheaper than processes?
+10. What is thread synchronization?
+11. What is a race condition?
+12. What is a mutex?
+13. What is a thread-safe program?
+14. What is `std::thread`?
+15. How can a thread be created in modern C++?
+16. What is `join()`?
+17. What is `detach()`?
+18. Compare process and thread communication.
+19. Explain process and thread using a real-world application.
+20. Write a simple C++ program demonstrating thread creation.
+
+---
+
+## 9. Memory Leak and Segmentation Fault — 20 Questions
+
+1. What is a memory leak?
+2. What causes memory leaks in C++?
+3. What is a segmentation fault?
+4. What causes segmentation faults?
+5. What is a dangling pointer?
+6. What is a null pointer dereference?
+7. What is a wild pointer?
+8. What is use-after-free?
+9. What is double deletion?
+10. How can memory leaks affect a program?
+11. How can smart pointers prevent memory leaks?
+12. How can segmentation faults be debugged?
+13. What is invalid memory access?
+14. What happens when an array is accessed outside its bounds?
+15. What is heap corruption?
+16. Differentiate memory leak and segmentation fault.
+17. Can a memory leak directly cause a segmentation fault?
+18. Give examples of code that can cause memory leaks.
+19. Give examples of code that can cause segmentation faults.
+20. Explain common C++ memory-management errors and their prevention.
+
+---
+
+## 10. malloc/free vs new/delete — 20 Questions
+
+1. What is `malloc()`?
+2. What is `free()`?
+3. What is `new`?
+4. What is `delete`?
+5. What is the difference between `malloc()` and `new`?
+6. What is the difference between `free()` and `delete`?
+7. Which performs type checking?
+8. Which calls constructors?
+9. Which calls destructors?
+10. How is an array allocated using `new`?
+11. How is an array released using `delete[]`?
+12. What happens if `malloc()` fails?
+13. What happens if `new` fails?
+14. What is `std::bad_alloc`?
+15. Why should `malloc()` and `delete` not be mixed?
+16. Why should `new` and `free()` not be mixed?
+17. Compare C-style and C++-style dynamic allocation.
+18. Write examples using `malloc/free`.
+19. Write examples using `new/delete`.
+20. Explain `malloc/free` vs `new/delete` with a comparison table.
+
+---
+
+# Language Core — Java Question Bank
+
+## 11. JDK vs JRE vs JVM — 20 Questions
+
+1. What is JVM?
+2. What is JRE?
+3. What is JDK?
+4. What is the purpose of JVM?
+5. What is the purpose of JRE?
+6. What is the purpose of JDK?
+7. What components are included in JDK?
+8. Does JRE contain a compiler?
+9. What is the Java compiler?
+10. What is `javac`?
+11. What is Java bytecode?
+12. Where is bytecode executed?
+13. What is the relationship between JDK, JRE, and JVM?
+14. Can a developer run Java programs using only JVM?
+15. Can a developer compile Java programs using only JRE?
+16. What is the Java Development Kit used for?
+17. What is the Java Runtime Environment used for?
+18. Differentiate JDK, JRE, and JVM.
+19. Draw the relationship between JDK, JRE, and JVM.
+20. Explain the complete Java execution environment.
+
+---
+
+## 12. How Java Achieves Platform Independence — 20 Questions
+
+1. What is platform independence?
+2. Why is Java called platform-independent?
+3. What is Java bytecode?
+4. What is the role of JVM in platform independence?
+5. What does "Write Once, Run Anywhere" mean?
+6. Why is Java source code not directly executed by the CPU?
+7. What happens when Java source code is compiled?
+8. Why can the same `.class` file run on different operating systems?
+9. What is the role of OS-specific JVM implementations?
+10. Is Java completely platform-independent?
+11. What is the difference between source code and bytecode?
+12. What is native code?
+13. Compare Java's execution model with C++.
+14. How does JVM provide portability?
+15. What happens when a Java program runs on Windows?
+16. What happens when the same Java program runs on Linux?
+17. What is JIT compilation?
+18. How does JIT affect Java execution?
+19. Explain Java's platform-independent architecture.
+20. Explain "Write Once, Run Anywhere" with a suitable diagram.
+
+---
+
+## 13. Heap vs Stack Memory in JVM — 20 Questions
+
+1. What is stack memory in JVM?
+2. What is heap memory in JVM?
+3. What is stored in the JVM stack?
+4. What is stored in the heap?
+5. Where are local primitive variables generally stored?
+6. Where are Java objects generally allocated?
+7. What is a stack frame?
+8. What is a method frame?
+9. What happens when a method is called?
+10. What happens to a stack frame when a method returns?
+11. What is `StackOverflowError`?
+12. What can cause `OutOfMemoryError`?
+13. How does garbage collection affect heap memory?
+14. Is heap memory shared between threads?
+15. Does each thread have its own JVM stack?
+16. Compare heap and stack memory.
+17. How are object references handled in Java?
+18. Why is stack memory generally faster?
+19. Explain memory allocation during a method call.
+20. Draw and explain JVM heap and stack memory.
+
+---
+
+## 14. Garbage Collection in Java — 20 Questions
+
+1. What is garbage collection?
+2. Why does Java use garbage collection?
+3. What is an unreachable object?
+4. How does Java determine whether an object can be collected?
+5. What is a GC root?
+6. What is mark-and-sweep?
+7. What is mark-and-compact?
+8. What is generational garbage collection?
+9. What are young and old generations?
+10. What is a minor GC?
+11. What is a major/full GC?
+12. Can a programmer force garbage collection?
+13. What is `System.gc()`?
+14. Does `System.gc()` guarantee immediate garbage collection?
+15. What is object finalization?
+16. Why is relying on finalization discouraged?
+17. Can garbage collection cause application pauses?
+18. What is a memory leak in Java?
+19. How can objects remain unintentionally reachable?
+20. Explain the Java garbage-collection process with a suitable diagram.
+
+---
+
+## 15. `==` vs `equals()` — 20 Questions
+
+1. What is the `==` operator in Java?
+2. What is the `equals()` method?
+3. How does `==` compare primitive values?
+4. How does `==` compare object references?
+5. How does `equals()` generally compare objects?
+6. What is reference equality?
+7. What is logical/content equality?
+8. Why are Strings commonly used to demonstrate `==` vs `equals()`?
+9. What is the String pool?
+10. Why can two identical String literals have the same reference?
+11. What happens when Strings are created using `new`?
+12. What is the `hashCode()` contract?
+13. Why should `equals()` and `hashCode()` generally be overridden together?
+14. Can `equals()` be overridden?
+15. What is the default implementation of `equals()` in `Object`?
+16. Give an example where `==` and `equals()` produce different results.
+17. Compare `==` and `equals()`.
+18. What happens when `equals()` is not properly overridden?
+19. Explain `==` and `equals()` using String objects.
+20. Write a Java program demonstrating the difference between `==` and `equals()`.
+
+---
+
+## 16. HashMap vs ConcurrentHashMap — 20 Questions
+
+1. What is a HashMap?
+2. What is a ConcurrentHashMap?
+3. Why is ConcurrentHashMap required?
+4. Is HashMap thread-safe?
+5. Is ConcurrentHashMap thread-safe?
+6. Can HashMap contain a null key?
+7. Can ConcurrentHashMap contain a null key?
+8. How does HashMap handle collisions?
+9. What is hashing?
+10. What is a hash bucket?
+11. What is rehashing?
+12. How does ConcurrentHashMap support concurrent access?
+13. What is the difference between synchronization and concurrency?
+14. What is fail-fast behavior?
+15. What is weakly consistent iteration?
+16. When should HashMap be used?
+17. When should ConcurrentHashMap be used?
+18. Compare HashMap and ConcurrentHashMap.
+19. Why should HashMap generally not be modified concurrently without synchronization?
+20. Explain the internal working and concurrency characteristics of HashMap and ConcurrentHashMap.
+
+---
+
+## 17. Process vs Thread in Java — 20 Questions
+
+1. What is a process in Java?
+2. What is a thread in Java?
+3. What is the difference between process and thread?
+4. Why are Java threads considered lightweight?
+5. How can a thread be created in Java?
+6. What is the `Thread` class?
+7. What is the `Runnable` interface?
+8. What is `Callable`?
+9. What is the difference between `Runnable` and `Callable`?
+10. What does `start()` do?
+11. What is the difference between `start()` and `run()`?
+12. What is `join()`?
+13. What is thread interruption?
+14. What are thread states in Java?
+15. What is thread priority?
+16. What is an ExecutorService?
+17. Why are thread pools used?
+18. Compare processes and threads in Java.
+19. Explain how to create and execute multiple threads.
+20. Write a Java program demonstrating thread creation.
+
+---
+
+## 18. Synchronization and Deadlock — 20 Questions
+
+1. What is synchronization in Java?
+2. Why is synchronization required?
+3. What is a critical section?
+4. What is a race condition?
+5. What is the `synchronized` keyword?
+6. What is a synchronized method?
+7. What is a synchronized block?
+8. What is an intrinsic lock?
+9. What is an object monitor?
+10. What is mutual exclusion?
+11. What is deadlock?
+12. What causes deadlock?
+13. What are the four necessary conditions for deadlock?
+14. How can synchronized blocks cause deadlock?
+15. How can deadlock be prevented?
+16. What is lock ordering?
+17. What is the difference between synchronization and deadlock?
+18. Give a Java example of a race condition.
+19. Give a Java example of deadlock.
+20. Explain synchronization and deadlock with suitable Java examples.
+
+---
+
+## 19. What Happens When a Java Program Runs Internally? — 20 Questions
+
+1. What happens when you execute a Java program?
+2. What happens when Java source code is compiled?
+3. What is the role of `javac`?
+4. What is bytecode?
+5. Where is bytecode stored?
+6. What is the Class Loader?
+7. What are the phases of class loading?
+8. What is bytecode verification?
+9. What is the JVM runtime data area?
+10. What is the method area/metaspace?
+11. What is the JVM heap?
+12. What is the JVM stack?
+13. What is the PC register?
+14. What is the native method stack?
+15. What is the Execution Engine?
+16. What is an interpreter?
+17. What is JIT compilation?
+18. What is the role of the garbage collector?
+19. Explain the complete journey from `.java` source code to program execution.
+20. Draw and explain the internal working of the JVM when a Java program runs.
+
+---
+
+## 20. String vs StringBuilder vs StringBuffer — 20 Questions
+
+1. What is a String in Java?
+2. Why is String immutable?
+3. What is StringBuilder?
+4. What is StringBuffer?
+5. Why are StringBuilder and StringBuffer used?
+6. What is the difference between mutable and immutable objects?
+7. How does String concatenation work?
+8. Why can repeated String concatenation be inefficient?
+9. Is StringBuilder thread-safe?
+10. Is StringBuffer thread-safe?
+11. Which is generally faster, StringBuilder or StringBuffer?
+12. When should StringBuilder be used?
+13. When should StringBuffer be used?
+14. What is the String pool?
+15. What is the difference between String literal and `new String()`?
+16. Compare String, StringBuilder, and StringBuffer.
+17. What happens internally when a String is modified?
+18. How does StringBuilder manage its internal buffer?
+19. Write a Java program comparing String concatenation and StringBuilder.
+20. Explain String, StringBuilder, and StringBuffer with use cases.
+
+# Python Core Question Bank — 200 Questions
+
+## 1. GIL (Global Interpreter Lock) — 20 Questions
+
+1. What is the Global Interpreter Lock (GIL) in Python?
+2. Why does CPython use the GIL?
+3. How does the GIL affect Python threads?
+4. Does the GIL prevent all concurrency in Python?
+5. What is the difference between concurrency and parallelism?
+6. Why can Python threads still be useful despite the GIL?
+7. How does the GIL affect CPU-bound programs?
+8. How does the GIL affect I/O-bound programs?
+9. Can multiple Python threads execute Python bytecode simultaneously in CPython?
+10. Does the GIL apply to multiprocessing?
+11. How does multiprocessing help with CPU-bound tasks?
+12. What is thread switching under the GIL?
+13. Can C/C++ extensions release the GIL?
+14. What is the difference between the GIL and a normal mutex?
+15. Does the GIL make Python programs automatically thread-safe?
+16. What are the disadvantages of the GIL?
+17. How can CPU-bound Python applications achieve parallelism?
+18. Compare multithreading and multiprocessing in the context of the GIL.
+19. Is the GIL a property of Python itself or a specific implementation?
+20. Explain the GIL with a suitable multithreading example.
+
+---
+
+# 2. Multithreading vs Multiprocessing — 20 Questions
+
+1. What is multithreading?
+2. What is multiprocessing?
+3. What is the main difference between threads and processes?
+4. Do threads share memory?
+5. Do processes have separate memory spaces?
+6. Which is generally better for CPU-bound tasks in CPython?
+7. Which is generally useful for I/O-bound tasks?
+8. How does the GIL affect multithreading?
+9. Does multiprocessing bypass the GIL?
+10. What is inter-thread communication?
+11. What is inter-process communication?
+12. What is a thread pool?
+13. What is a process pool?
+14. What are the advantages of multithreading?
+15. What are the advantages of multiprocessing?
+16. What are the disadvantages of multithreading?
+17. What are the disadvantages of multiprocessing?
+18. Compare memory consumption between threads and processes.
+19. Give real-world examples of multithreading and multiprocessing.
+20. Compare multithreading and multiprocessing with suitable Python examples.
+
+---
+
+# 3. Mutable vs Immutable Objects — 20 Questions
+
+1. What is a mutable object?
+2. What is an immutable object?
+3. Give examples of mutable objects in Python.
+4. Give examples of immutable objects in Python.
+5. Is a list mutable?
+6. Is a tuple mutable?
+7. Is a string mutable?
+8. Is a dictionary mutable?
+9. Is a set mutable?
+10. Is an integer mutable or immutable?
+11. What happens when an immutable object is modified?
+12. How does object identity relate to mutability?
+13. What is the `id()` function?
+14. Why are strings immutable in Python?
+15. What are the advantages of immutable objects?
+16. How does immutability affect function arguments?
+17. Can a tuple contain mutable objects?
+18. Explain the difference between modifying an object and creating a new object.
+19. Compare mutable and immutable objects with examples.
+20. Write a Python program demonstrating mutable and immutable objects.
+
+---
+
+# 4. `is` vs `==` — 20 Questions
+
+1. What is the `==` operator in Python?
+2. What is the `is` operator?
+3. What does `==` compare?
+4. What does `is` compare?
+5. What is object identity?
+6. What is value equality?
+7. Give an example where `is` and `==` produce different results.
+8. Why should `is` generally be used with `None`?
+9. Why should `is` not normally be used to compare strings?
+10. What does `id()` return?
+11. How is `is` related to object identity?
+12. How is `==` related to the `__eq__()` method?
+13. Can two different objects have equal values?
+14. Can two references point to the same object?
+15. What happens when two variables reference the same list?
+16. Explain `is None` versus `== None`.
+17. What are Python object interning and caching?
+18. Why can small integers sometimes make `is` appear to work unexpectedly?
+19. Compare `is` and `==` with examples.
+20. Write a Python program demonstrating the difference between `is` and `==`.
+
+---
+
+# 5. Deep Copy vs Shallow Copy — 20 Questions
+
+1. What is object copying in Python?
+2. What is a shallow copy?
+3. What is a deep copy?
+4. What is the `copy` module?
+5. What does `copy.copy()` do?
+6. What does `copy.deepcopy()` do?
+7. What happens to nested objects during shallow copying?
+8. What happens to nested objects during deep copying?
+9. How does assignment differ from copying?
+10. What happens when a nested list is modified after shallow copying?
+11. What happens when a nested list is modified after deep copying?
+12. What is reference sharing?
+13. What are the advantages of shallow copying?
+14. What are the advantages of deep copying?
+15. What are the disadvantages of deep copying?
+16. When should shallow copy be preferred?
+17. When should deep copy be preferred?
+18. Compare assignment, shallow copy, and deep copy.
+19. Explain deep and shallow copy using a nested dictionary.
+20. Write a Python program demonstrating shallow and deep copying.
+
+---
+
+# 6. Python Memory Management — 20 Questions
+
+1. How does Python manage memory?
+2. What is the Python private heap?
+3. What is the role of the Python memory manager?
+4. What is reference counting?
+5. How does reference counting work?
+6. What happens when an object's reference count becomes zero?
+7. What is garbage collection in Python?
+8. Why does Python need cyclic garbage collection?
+9. What is a reference cycle?
+10. What is the `gc` module?
+11. What is memory allocation?
+12. What is `pymalloc`?
+13. How are Python objects stored in memory?
+14. What causes memory leaks in Python?
+15. Can Python programs have memory leaks despite automatic garbage collection?
+16. How can memory usage be monitored in Python?
+17. What is the difference between stack and heap concepts in Python?
+18. How does deleting a variable affect an object?
+19. Explain Python's memory-management process.
+20. Explain reference counting and garbage collection with a suitable example.
+
+---
+
+# 7. What Happens When Python Code Executes Internally? — 20 Questions
+
+1. What happens when a Python program is executed?
+2. Is Python interpreted or compiled?
+3. What is Python bytecode?
+4. What is a `.pyc` file?
+5. What is the Python Virtual Machine (PVM)?
+6. What is the role of the Python interpreter?
+7. What happens during lexical analysis?
+8. What is parsing?
+9. What is an Abstract Syntax Tree (AST)?
+10. What happens after Python source code is parsed?
+11. How is bytecode generated?
+12. What is the `dis` module?
+13. What is the bytecode evaluation loop?
+14. What is the role of the Python runtime?
+15. What happens when an imported module is executed?
+16. What is module caching?
+17. What happens when Python encounters an exception?
+18. Explain the complete execution path of a Python program.
+19. Compare Python source code, bytecode, and machine code.
+20. Explain Python code execution internally with a suitable flow diagram.
+
+---
+
+# 8. List vs Tuple — 20 Questions
+
+1. What is a list in Python?
+2. What is a tuple in Python?
+3. What is the main difference between lists and tuples?
+4. Are lists mutable?
+5. Are tuples mutable?
+6. Can lists contain duplicate values?
+7. Can tuples contain duplicate values?
+8. Can lists contain different data types?
+9. Can tuples contain different data types?
+10. Which is generally more suitable for fixed data: list or tuple?
+11. What are the performance differences between lists and tuples?
+12. Why can tuples be used as dictionary keys in some cases?
+13. Can a tuple contain a mutable object?
+14. What methods are available for lists?
+15. What methods are available for tuples?
+16. When should a list be used?
+17. When should a tuple be used?
+18. Compare memory usage of lists and tuples.
+19. Compare lists and tuples with practical examples.
+20. Write a Python program demonstrating the differences between lists and tuples.
+
+---
+
+# 9. Generators and Memory Efficiency — 20 Questions
+
+1. What is a generator in Python?
+2. Why are generators used?
+3. What is the `yield` keyword?
+4. How is `yield` different from `return`?
+5. What is a generator function?
+6. What is a generator object?
+7. What is lazy evaluation?
+8. Why are generators memory efficient?
+9. Do generators store all generated values in memory?
+10. What is the `next()` function?
+11. What happens when a generator has no more values?
+12. What is `StopIteration`?
+13. What is a generator expression?
+14. How is a generator expression different from a list comprehension?
+15. When should generators be used?
+16. What are the advantages of generators?
+17. What are the disadvantages of generators?
+18. Explain generators using a large-data processing example.
+19. Compare generators and lists based on memory usage.
+20. Write a Python program demonstrating a generator and explain why it is memory efficient.
+
+---
+
+# 10. Interpreter vs Compiler in Python — 20 Questions
+
+1. What is an interpreter?
+2. What is a compiler?
+3. What is the difference between an interpreter and compiler?
+4. Is Python an interpreted language?
+5. Is Python also compiled?
+6. What is Python bytecode?
+7. What does the Python compiler do?
+8. What does the Python interpreter do?
+9. What is the Python Virtual Machine?
+10. How does CPython execute Python code?
+11. Is Python source code directly converted into machine code?
+12. What is the difference between bytecode and machine code?
+13. What are the advantages of interpretation?
+14. What are the advantages of compilation?
+15. What are the disadvantages of interpretation?
+16. Compare Python execution with C++ execution.
+17. What happens when a `.py` file is executed?
+18. Why is Python often called an interpreted language?
+19. Explain the roles of compiler, bytecode, and interpreter in Python.
+20. Explain the complete Python execution process from source code to execution.
+
+
+Puzzles – Detailed Questions
+1. 25 Horses Puzzle
+
+There are 25 horses and you need to determine the 3 fastest horses.
+
+You have a race track where only 5 horses can race at a time. You do not have a stopwatch, so after each race you only know the relative finishing order of the horses in that race.
+
+Conditions:
+Maximum 5 horses can participate in one race.
+You cannot measure their exact speeds.
+You only know which horse finished before another horse.
+You need to identify the fastest 3 horses.
+Question:
+
+What is the minimum number of races required to determine the 3 fastest horses? Explain your strategy step by step.
+
+2. 8 Ball Puzzle
+
+You have 8 identical-looking balls.
+
+Exactly one ball is heavier than the other seven. You have a balance scale that can compare the weights of two groups of balls.
+
+Conditions:
+You can use the balance scale only twice.
+You don't know which ball is heavier.
+All other balls have exactly the same weight.
+Question:
+
+How can you identify the heavier ball using only 2 weighings?
+
+Explain:
+
+How you divide the balls for the first weighing.
+What you do if the scale balances.
+What you do if one side is heavier.
+How the second weighing identifies the ball.
+3. Bridge and Torch Puzzle
+
+Four people need to cross a bridge at night.
+
+They have one torch, and the bridge is too dangerous to cross without it.
+
+Crossing times:
+Person	Time
+A	1 minute
+B	2 minutes
+C	7 minutes
+D	10 minutes
+Rules:
+At most two people can cross the bridge at once.
+They must carry the torch whenever crossing.
+When two people cross together, they move at the speed of the slower person.
+The torch must be brought back if people remain on the original side.
+Question:
+
+What is the minimum total time required for all four people to cross the bridge?
+
+Explain the sequence of crossings.
+
+4. Water Jug Puzzle
+
+You have two water jugs:
+
+One jug holds 5 litres.
+The other jug holds 3 litres.
+
+Neither jug has measurement markings.
+
+You have an unlimited supply of water.
+
+Allowed operations:
+Fill a jug completely.
+Empty a jug completely.
+Pour water from one jug into the other until either the source is empty or the destination is full.
+Question:
+
+How can you measure exactly 4 litres of water using only the 5-litre and 3-litre jugs?
+
+Give every step and state the amount of water in each jug after every operation.
+
+5. 100 Prisoners Puzzle
+
+There are 100 prisoners, numbered from 1 to 100.
+
+There are also 100 boxes, numbered from 1 to 100. Each box contains exactly one prisoner's number, and the numbers are randomly distributed.
+
+Each prisoner enters the room individually.
+
+Rules:
+A prisoner can open at most 50 boxes.
+They must find their own number.
+After leaving the room, they cannot communicate with the remaining prisoners.
+The boxes are reset to their original state after each prisoner leaves.
+The prisoners can agree on a strategy before the experiment begins.
+Question:
+
+What strategy gives the prisoners the highest possible probability that all 100 prisoners find their own numbers?
+
+Explain the strategy and why it performs much better than simply opening 50 random boxes.
+
+6. Egg Dropping Puzzle
+
+You have 2 identical eggs and a building with 100 floors.
+
+There is a critical floor such that:
+
+If an egg is dropped from that floor or above, it breaks.
+If it is dropped below that floor, it does not break.
+
+You do not know the critical floor.
+
+Conditions:
+You have only 2 eggs.
+A broken egg cannot be used again.
+An unbroken egg can be reused.
+You need to determine the critical floor.
+Question:
+
+What is the minimum number of egg drops required in the worst case to determine the critical floor among 100 floors?
+
+Explain the strategy rather than simply trying floors one by one.
+
+7. Coin Flip Puzzle
+
+You are given 100 coins lying on a table.
+
+Initially, all coins are showing heads.
+
+You perform the following operation:
+
+In the first round, you flip every coin.
+In the second round, you flip every 2nd coin.
+In the third round, you flip every 3rd coin.
+Continue this process until round 100.
+
+For example:
+
+Round 1 → flip coins 1, 2, 3, ..., 100.
+Round 2 → flip coins 2, 4, 6, ..., 100.
+Round 3 → flip coins 3, 6, 9, ..., 99.
+Question:
+
+After all 100 rounds, which coins will be showing heads?
+
+Explain the mathematical pattern behind the answer.
+
+8. Poisoned Bottle Puzzle
+
+You have 1,000 bottles of liquid.
+
+Exactly one bottle is poisoned.
+
+The poison has the following property:
+
+Anyone who drinks even a tiny amount of the poison will die exactly 24 hours later.
+
+You have 10 test subjects available.
+
+Conditions:
+You can give each subject samples from multiple bottles.
+You can perform only one round of testing.
+You must identify the poisoned bottle after 24 hours.
+A subject can receive a mixture of samples from several bottles.
+Question:
+
+How can you identify the poisoned bottle using only 10 subjects?
+
+Explain how binary representation can be used to solve the problem.
+
+9. Pirate Gold Division Puzzle
+
+Five pirates have captured 100 gold coins.
+
+They must divide the coins according to the following rules:
+
+The most senior pirate proposes a distribution.
+All pirates, including the proposer, vote.
+If at least 50% of the pirates vote for the proposal, it is accepted.
+If the proposal is rejected, the proposer is killed.
+The remaining pirates repeat the process.
+Pirates are perfectly logical.
+Their priorities are:
+Stay alive.
+Get as many coins as possible.
+If two outcomes give them the same number of coins, they prefer to see another pirate killed.
+Question:
+
+How should the 100 coins be distributed among the five pirates so that the senior pirate survives and keeps as many coins as possible?
+
+Show the reasoning from the final pirate backward to the first pirate.
+
+10. Clock Angle Puzzle
+
+An analog clock shows a particular time.
+
+Question:
+
+What is the angle between the hour hand and the minute hand at 3:15?
+
+Then consider the more general problem:
+
+At what times between 12:00 and 1:00 will the hour and minute hands overlap?
+
+Challenge:
+
+Derive a formula for calculating the angle between the hour and minute hands at any given time.
+
+Remember that the hour hand moves continuously rather than jumping from one number to the next.
+
+11. Train Crossing Puzzle
+
+Two trains are traveling toward each other on the same railway track.
+
+Given:
+Train A is 100 metres long and travels at 60 km/h.
+Train B is 150 metres long and travels at 40 km/h.
+They are initially separated by a certain distance.
+Question:
+
+How long will it take for the two trains to completely pass each other once they begin crossing?
+
+Explain why the lengths of both trains must be considered and why their relative speed is used.
+
+General version:
+
+If two trains have lengths \(L_1\) and \(L_2\), and their speeds are \(V_1\) and \(V_2\), derive the formula for the time required for them to completely cross each other when traveling in opposite directions.
+
+12. River Crossing Puzzle
+
+A farmer needs to cross a river with:
+
+A wolf
+A goat
+A cabbage
+
+The farmer has a small boat.
+
+Conditions:
+The farmer can take only one item with him at a time.
+The wolf cannot be left alone with the goat.
+The goat cannot be left alone with the cabbage.
+The farmer must be present to prevent these situations.
+Question:
+
+How can the farmer transport the wolf, goat, and cabbage safely to the other side of the river?
+
+Give the complete sequence of trips.
+
+Challenge:
+
+Explain why simply taking the wolf first or the cabbage first can create a problem.
+
+13. Probability – Dice Questions
+
+You roll one or more fair dice and answer probability questions.
+
+Question 1:
+
+What is the probability of getting a 6 when rolling one fair die?
+
+Question 2:
+
+What is the probability of getting at least one 6 when rolling two dice?
+
+Question 3:
+
+What is the probability that the sum of two dice is 7?
+
+Question 4:
+
+Two dice are rolled. What is the probability that both dice show the same number?
+
+Question 5:
+
+Three dice are rolled. What is the probability of getting at least one 6?
+
+Question 6:
+
+Two dice are rolled. Given that the first die shows an even number, what is the probability that the sum of the two dice is even?
+
+Challenge:
+
+Explain the difference between:
+
+Independent events
+Mutually exclusive events
+Conditional probability
+14. Monty Hall Problem
+
+You are participating in a game show.
+
+There are 3 doors:
+
+Behind one door is a car.
+Behind the other two doors are goats.
+
+You select one door.
+
+The host, who knows what is behind every door, opens one of the other two doors and reveals a goat.
+
+The host then gives you a choice:
+
+Stay with your original door or switch to the remaining unopened door.
+
+Question:
+
+Should you stay or switch? What is the probability of winning the car under each strategy?
+
+Explain the answer using probability rather than intuition.
+
+Challenge:
+
+How does the answer change if there are 100 doors, one car, and 98 goats are revealed after your initial choice?
+
+15. Logical Deduction Puzzles
+
+Logical deduction puzzles require you to reach a conclusion using a set of clues and constraints.
+
+Example Puzzle – Three Boxes
+
+There are three boxes:
+
+Box A is labeled Apples
+Box B is labeled Oranges
+Box C is labeled Apples & Oranges
+
+However, all three labels are incorrect.
+
+You are allowed to take one fruit from only one box without looking inside.
+
+Question:
+
+How can you correctly identify the contents of all three boxes by picking only one fruit?
+
+Explain your reasoning step by step.
+
+Other Logical Deduction Questions for Practice
+Puzzle A – Two Doors
+
+There are two doors:
+
+One leads to safety.
+One leads to danger.
+
+There are two guards:
+
+One always tells the truth.
+One always lies.
+
+You don't know which guard is which.
+
+You can ask one question to one guard.
+
+What question should you ask to determine the safe door?
+
+Puzzle B – Three Switches
+
+There are three switches outside a closed room. Inside the room is one light bulb.
+
+Only one switch controls the bulb.
+
+You may operate the switches as much as you want, but you can enter the room only once.
+
+How can you determine which switch controls the bulb?
+
+Puzzle C – Missing Number
+
+Find the next number:
+
+2, 6, 12, 20, 30, ?
+
+Explain the pattern and determine the missing number.
+
+Puzzle D – Family Relationship
+
+A man looks at a photograph and says:
+
+"Brothers and sisters, I have none. But this man's father is my father's son."
+
+Who is the man in the photograph?
+
+
+# Linux Question Bank — 400 Questions
+
+## 1. What Happens When You Type a Command in Terminal? — 20 Questions
+
+1. What happens when you type a command in a Linux terminal?
+2. What is a terminal?
+3. What is a shell?
+4. What is Bash?
+5. What happens when the shell receives a command?
+6. What is command parsing?
+7. What is PATH lookup?
+8. How does Linux locate an executable command?
+9. What is a built-in shell command?
+10. What is an external command?
+11. What is the difference between a shell built-in and an executable?
+12. What is process creation during command execution?
+13. What do `fork()` and `exec()` do?
+14. What is the role of the kernel during command execution?
+15. What happens when a command is not found?
+16. What happens when a command is executed in the background?
+17. What are stdin, stdout, and stderr?
+18. How does shell redirection work?
+19. Explain the complete execution flow of `ls -l`.
+20. Explain the complete journey from typing a command to receiving its output.
+
+---
+
+# 2. Process vs Thread — 20 Questions
+
+1. What is a process in Linux?
+2. What is a thread?
+3. What is the difference between a process and a thread?
+4. Do threads share the same address space?
+5. Do processes have separate address spaces?
+6. What is a Process ID (PID)?
+7. What is a Thread ID (TID)?
+8. What resources are shared between threads?
+9. What resources are separate for each thread?
+10. Why are threads considered lightweight?
+11. Which is generally faster to create: a process or a thread?
+12. What is context switching?
+13. What is inter-process communication?
+14. How do threads communicate?
+15. What are the advantages of processes?
+16. What are the advantages of threads?
+17. What problems can occur with multithreading?
+18. Compare process and thread in terms of memory and performance.
+19. Give a real-world Linux example of processes and threads.
+20. Explain process vs thread with a suitable diagram.
+
+---
+
+# 3. Zombie Process — 20 Questions
+
+1. What is a zombie process?
+2. Why does a zombie process occur?
+3. What happens when a child process terminates?
+4. What is the role of the parent process after child termination?
+5. What is the purpose of `wait()`?
+6. What is the purpose of `waitpid()`?
+7. Does a zombie process consume CPU?
+8. Does a zombie process consume memory?
+9. What information does a zombie retain in the process table?
+10. How can you identify a zombie process in Linux?
+11. What does the `Z` process state indicate?
+12. How can zombie processes be removed?
+13. Can you kill a zombie process using `kill -9`?
+14. What happens if the parent process terminates?
+15. What is process reparenting?
+16. What is the role of `init`/PID 1?
+17. What is the difference between zombie and orphan processes?
+18. What causes excessive zombie processes?
+19. How can programmers prevent zombie processes?
+20. Explain the complete lifecycle of a zombie process.
+
+---
+
+# 4. Daemon Process — 20 Questions
+
+1. What is a daemon process?
+2. Why are daemon processes used?
+3. What are common examples of Linux daemons?
+4. What is the difference between a daemon and a normal process?
+5. Do daemons normally interact directly with a terminal?
+6. What is a background service?
+7. What is `systemd`?
+8. What is a systemd service?
+9. How can you check running services?
+10. What is the purpose of `systemctl`?
+11. What is the difference between starting and enabling a service?
+12. How can you stop a daemon?
+13. How can you restart a daemon?
+14. What is daemonization?
+15. Why do traditional daemons detach from the controlling terminal?
+16. What is the relationship between daemons and server applications?
+17. How can daemon logs be inspected?
+18. Give examples of network-related daemons.
+19. Explain how a daemon starts and runs in the background.
+20. Explain daemon processes with suitable Linux commands.
+
+---
+
+# 5. Hard Link vs Soft Link — 20 Questions
+
+1. What is a hard link?
+2. What is a soft link?
+3. What is a symbolic link?
+4. How is a hard link created?
+5. How is a soft link created?
+6. What is an inode?
+7. Do hard links share the same inode?
+8. Does a symbolic link have its own inode?
+9. Can a hard link point to a directory?
+10. Can a symbolic link point to a directory?
+11. What happens to a hard link when the original filename is deleted?
+12. What happens to a symbolic link when its target is deleted?
+13. Can hard links cross filesystems?
+14. Can symbolic links cross filesystems?
+15. Compare hard links and soft links.
+16. What are the advantages of symbolic links?
+17. What are the limitations of hard links?
+18. How can you identify a symbolic link?
+19. Write commands to create and inspect both types of links.
+20. Explain hard links and soft links with an inode diagram.
+
+---
+
+# 6. Inode in Linux — 20 Questions
+
+1. What is an inode?
+2. What information is stored in an inode?
+3. Does an inode store the filename?
+4. How is a filename associated with an inode?
+5. What is an inode number?
+6. How can you display inode numbers?
+7. What is the relationship between inode and file?
+8. What happens to an inode when a file is deleted?
+9. What is inode exhaustion?
+10. Can a disk have free space but no available inodes?
+11. How do hard links use inodes?
+12. How do symbolic links use inodes?
+13. What metadata is stored in an inode?
+14. Where is file content stored?
+15. What is the link count in an inode?
+16. How does `ls -i` help inspect inodes?
+17. What happens to inode link count when a hard link is created?
+18. What happens to the inode when all hard links are removed?
+19. How can inode usage be checked?
+20. Explain the relationship between directory entry, filename, inode, and file data.
+
+---
+
+# 7. `chmod 755` — 20 Questions
+
+1. What does `chmod` do?
+2. What does `chmod 755` mean?
+3. What does the first `7` represent?
+4. What does the first `5` represent?
+5. What does the second `5` represent?
+6. What does read permission mean?
+7. What does write permission mean?
+8. What does execute permission mean?
+9. What is the numeric value of read permission?
+10. What is the numeric value of write permission?
+11. What is the numeric value of execute permission?
+12. Why does `7` represent `rwx`?
+13. Why does `5` represent `r-x`?
+14. What permissions does `chmod 644` provide?
+15. What permissions does `chmod 700` provide?
+16. What is symbolic chmod syntax?
+17. How can permissions be changed recursively?
+18. What is the difference between file and directory execute permission?
+19. Write commands to set common Linux permissions.
+20. Explain `chmod 755` using both numeric and symbolic notation.
+
+---
+
+# 8. `kill` vs `kill -9` — 20 Questions
+
+1. What does the `kill` command do?
+2. What signal does `kill` send by default?
+3. What is `SIGTERM`?
+4. What is `SIGKILL`?
+5. What does `kill -9` mean?
+6. Why should `SIGTERM` generally be tried before `SIGKILL`?
+7. Can a process ignore SIGTERM?
+8. Can a process catch SIGKILL?
+9. Can a process handle SIGTERM?
+10. What happens when SIGKILL is sent?
+11. What is graceful process termination?
+12. What is forced process termination?
+13. How can you find a process PID?
+14. What does `kill -15 PID` do?
+15. What is the difference between `kill PID` and `kill -9 PID`?
+16. What are other commonly used Linux signals?
+17. What is `killall`?
+18. What is `pkill`?
+19. What risks are associated with using `kill -9`?
+20. Explain the proper process-termination workflow using Linux signals.
+
+---
+
+# 9. `grep` vs `find` vs `locate` — 20 Questions
+
+1. What is `grep`?
+2. What is `find`?
+3. What is `locate`?
+4. What is the primary purpose of `grep`?
+5. What is the primary purpose of `find`?
+6. What is the primary purpose of `locate`?
+7. How do you search for text inside files using `grep`?
+8. How do you search for a filename using `find`?
+9. How does `locate` find files?
+10. What is the `updatedb` database?
+11. Which command performs a real-time filesystem search?
+12. Which command is generally faster for filename searches?
+13. What is the difference between content search and filename search?
+14. How can `grep` search recursively?
+15. How can `find` search by file type?
+16. How can `find` search by file size?
+17. How can `find` execute a command on matching files?
+18. Compare `grep`, `find`, and `locate`.
+19. Give practical examples of all three commands.
+20. Explain when you would choose `grep`, `find`, or `locate`.
+
+---
+
+# 10. `>` vs `>>` — 20 Questions
+
+1. What does `>` do in Linux?
+2. What does `>>` do?
+3. What is output redirection?
+4. What happens when `>` redirects output to an existing file?
+5. What happens when `>>` redirects output to an existing file?
+6. What happens if the destination file does not exist?
+7. How can you redirect command output to a file?
+8. How can you append output to a file?
+9. What is the difference between overwrite and append?
+10. What happens when `echo "Hello" > file.txt` is executed?
+11. What happens when `echo "World" >> file.txt` is executed?
+12. What is stderr redirection?
+13. What does `2>` mean?
+14. What does `2>>` mean?
+15. What does `&>` mean in Bash?
+16. How can stdout and stderr be redirected separately?
+17. What is `/dev/null`?
+18. Give examples of practical redirection.
+19. Compare `>`, `>>`, `2>`, and `2>>`.
+20. Explain Linux output redirection with examples.
+
+---
+
+# 11. Pipe `|` — 20 Questions
+
+1. What is a pipe in Linux?
+2. What does the `|` operator do?
+3. Why are pipes useful?
+4. How does a pipe connect two commands?
+5. What is standard input?
+6. What is standard output?
+7. How does one command's stdout become another command's stdin?
+8. Explain `ls | grep txt`.
+9. Explain `cat file.txt | grep error`.
+10. Can multiple pipes be chained?
+11. What is the difference between a pipe and redirection?
+12. What is an unnamed pipe?
+13. What is a named pipe?
+14. What is a FIFO?
+15. How can `mkfifo` create a named pipe?
+16. What happens if a command in a pipeline fails?
+17. What is the Bash `pipefail` option?
+18. Give examples of useful Linux pipelines.
+19. Explain how a pipeline works internally.
+20. Design a pipeline to find and count matching lines in files.
+
+---
+
+# 12. Swap Memory — 20 Questions
+
+1. What is swap memory?
+2. Why is swap used?
+3. Is swap the same as RAM?
+4. Where is swap stored?
+5. What is a swap partition?
+6. What is a swap file?
+7. What happens when Linux moves memory pages to swap?
+8. What is swapping?
+9. What is a page fault?
+10. What is swap-in?
+11. What is swap-out?
+12. How can swap usage be checked?
+13. What is `swapon`?
+14. What is `swapoff`?
+15. What is `swappiness`?
+16. How does excessive swapping affect performance?
+17. What is thrashing?
+18. What are the advantages of swap?
+19. What are the disadvantages of excessive swap usage?
+20. Explain Linux swap memory and its relationship with RAM and virtual memory.
+
+---
+
+# 13. What Happens When RAM Gets Full? — 20 Questions
+
+1. What happens when physical RAM becomes heavily utilized?
+2. How does Linux manage memory pressure?
+3. What is virtual memory?
+4. What is swap?
+5. What happens when inactive pages are moved to swap?
+6. What is page reclaim?
+7. What is cache reclamation?
+8. What happens when RAM and swap are both exhausted?
+9. What is the Out-Of-Memory (OOM) condition?
+10. What is the Linux OOM killer?
+11. How does the OOM killer select processes?
+12. What is memory pressure?
+13. How can you identify processes consuming RAM?
+14. What does the `free` command show?
+15. What does the `top` command show?
+16. What does `htop` provide?
+17. How can you investigate high memory usage?
+18. What is thrashing?
+19. How can excessive memory usage be reduced?
+20. Explain the complete sequence of events when Linux runs out of available memory.
+
+---
+
+# 14. TCP vs UDP — 20 Questions
+
+1. What is TCP?
+2. What is UDP?
+3. What is the main difference between TCP and UDP?
+4. Is TCP connection-oriented?
+5. Is UDP connectionless?
+6. How does TCP provide reliability?
+7. Does UDP guarantee packet delivery?
+8. What is TCP's three-way handshake?
+9. Does UDP perform a handshake?
+10. What is TCP flow control?
+11. What is TCP congestion control?
+12. What are TCP sequence numbers?
+13. What are acknowledgments?
+14. Why is UDP generally lower overhead?
+15. Why is TCP used for many reliable data transfers?
+16. Why is UDP useful for real-time applications?
+17. Compare TCP and UDP headers.
+18. Give examples of TCP-based applications.
+19. Give examples of UDP-based applications.
+20. Compare TCP and UDP based on reliability, ordering, speed, connection, and use cases.
+
+---
+
+# 15. HTTP vs HTTPS — 20 Questions
+
+1. What is HTTP?
+2. What is HTTPS?
+3. What does HTTPS stand for?
+4. What is the default port for HTTP?
+5. What is the default port for HTTPS?
+6. Why is HTTPS more secure than HTTP?
+7. What is TLS?
+8. How does HTTPS encrypt communication?
+9. What is a digital certificate?
+10. What is a Certificate Authority?
+11. What happens during an HTTPS connection?
+12. What is an HTTP request?
+13. What is an HTTP response?
+14. Can HTTP encrypt data?
+15. What is confidentiality?
+16. What is data integrity?
+17. How does HTTPS provide authentication?
+18. Compare HTTP and HTTPS.
+19. Why should login pages use HTTPS?
+20. Explain the complete HTTPS communication process.
+
+---
+
+# 16. SSH — 20 Questions
+
+1. What is SSH?
+2. What does SSH stand for?
+3. Why is SSH used?
+4. What is the default SSH port?
+5. How do you connect to a remote Linux server using SSH?
+6. What is password-based SSH authentication?
+7. What is key-based authentication?
+8. What is an SSH public key?
+9. What is an SSH private key?
+10. Why should private keys be protected?
+11. What is the `ssh` command?
+12. What is `scp`?
+13. What is `sftp`?
+14. How can SSH be used for remote command execution?
+15. What is SSH tunneling?
+16. What is port forwarding?
+17. How can SSH authentication be made more secure?
+18. What is the `~/.ssh` directory?
+19. What is `authorized_keys`?
+20. Explain the complete process of connecting to a Linux server using SSH keys.
+
+---
+
+# 17. Cron Job — 20 Questions
+
+1. What is a cron job?
+2. What is cron in Linux?
+3. What is `crond`?
+4. What is a crontab?
+5. How can you edit a user's crontab?
+6. What is the syntax of a cron expression?
+7. What do the five fields in a cron expression represent?
+8. What does `* * * * *` mean?
+9. How do you schedule a task every minute?
+10. How do you schedule a task every day at midnight?
+11. How do you schedule a task every Sunday?
+12. What is the difference between user and system crontabs?
+13. How can you list current cron jobs?
+14. How can you remove cron jobs?
+15. How can cron output be redirected to a log file?
+16. What happens if a cron command fails?
+17. What is the role of environment variables in cron?
+18. How can you troubleshoot a cron job that is not running?
+19. Give examples of practical cron jobs.
+20. Write and explain a cron job that performs a daily database backup.
+
+---
+
+# 18. Environment Variables and PATH — 20 Questions
+
+1. What is an environment variable?
+2. Why are environment variables used?
+3. What is the `PATH` environment variable?
+4. How does Linux use PATH to find commands?
+5. How can you display environment variables?
+6. What does the `env` command do?
+7. What does the `printenv` command do?
+8. How can you set an environment variable temporarily?
+9. What is the difference between shell and environment variables?
+10. What does `export` do?
+11. How can you add a directory to PATH?
+12. What is the difference between `$PATH` and `PATH`?
+13. What are `.bashrc` and `.profile`?
+14. Where can persistent environment variables be configured?
+15. What happens when two directories in PATH contain the same executable?
+16. How can you find which executable will be used?
+17. What does the `which` command do?
+18. What does the `command -v` command do?
+19. How can incorrect PATH configuration cause command failures?
+20. Explain environment variables and PATH with practical Linux examples.
+
+---
+
+# 19. `fork()` and `exec()` — 20 Questions
+
+1. What is `fork()`?
+2. What is `exec()`?
+3. Why are `fork()` and `exec()` important in Linux?
+4. What does `fork()` return to the parent?
+5. What does `fork()` return to the child?
+6. What happens to the address space after `fork()`?
+7. What is copy-on-write?
+8. What is the difference between `fork()` and `exec()`?
+9. Does `exec()` create a new process?
+10. What happens to the current program after successful `exec()`?
+11. What happens if `exec()` fails?
+12. What is the relationship between `fork()` and `exec()`?
+13. How does a shell use `fork()` and `exec()`?
+14. What is `wait()`?
+15. Why does a parent process call `wait()`?
+16. What is a child process?
+17. What is an orphan process?
+18. What is a zombie process?
+19. Explain how a shell executes an external command using `fork()` and `exec()`.
+20. Write or explain a C program demonstrating `fork()`, `exec()`, and `wait()`.
+
+---
+
+# 20. Production Server Down — How Will You Debug? — 20 Questions
+
+1. What is your first step when a production server goes down?
+2. How would you determine whether the server is reachable?
+3. How would you check network connectivity?
+4. How would you check whether the server is running?
+5. How would you check CPU and memory usage?
+6. How would you check disk usage?
+7. Which commands can be used to inspect running processes?
+8. How would you check whether the required service is running?
+9. How would you check service logs?
+10. How would you check system logs?
+11. How would you check whether a port is listening?
+12. How would you test whether an HTTP server is responding?
+13. How would you investigate high CPU usage?
+14. How would you investigate high memory usage?
+15. How would you investigate a full disk?
+16. How would you investigate a failed deployment?
+17. How would you check recent configuration changes?
+18. How would you investigate database connectivity?
+19. What steps would you take to restore service safely?
+20. Explain a complete production-server troubleshooting workflow from **symptom → diagnosis → recovery → verification → prevention**.
+
+# Git Question Bank — 400 Questions
+
+## 1. What is Git? — 20 Questions
+
+1. What is Git?
+2. Why is Git used?
+3. What is version control?
+4. What is distributed version control?
+5. How is Git different from centralized version control systems?
+6. Who created Git?
+7. What problems does Git solve in software development?
+8. What is a Git repository?
+9. What is a commit in Git?
+10. What is a branch in Git?
+11. What is the working directory?
+12. What is the staging area?
+13. What is the local repository?
+14. What is a remote repository?
+15. Why is Git useful for team collaboration?
+16. How does Git track changes?
+17. What is a commit hash?
+18. What is Git history?
+19. What are the main benefits of using Git?
+20. Explain the basic Git workflow from modifying a file to committing it.
+
+---
+
+## 2. Git vs GitHub — 20 Questions
+
+1. What is Git?
+2. What is GitHub?
+3. What is the main difference between Git and GitHub?
+4. Is Git a version-control system or hosting platform?
+5. Is GitHub required to use Git?
+6. Can Git work without an internet connection?
+7. Can GitHub be used without Git?
+8. What is repository hosting?
+9. What features does GitHub provide beyond Git?
+10. What is a Pull Request on GitHub?
+11. What are GitHub Issues?
+12. What are GitHub Actions?
+13. What is GitHub collaboration?
+14. What is a remote repository?
+15. How does Git interact with GitHub?
+16. What are alternatives to GitHub?
+17. Compare GitHub, GitLab, and Bitbucket.
+18. What is the difference between `git` commands and GitHub features?
+19. Explain a typical Git + GitHub workflow.
+20. Compare Git and GitHub with a suitable example.
+
+---
+
+## 3. What is a Repository? — 20 Questions
+
+1. What is a Git repository?
+2. What is a local repository?
+3. What is a remote repository?
+4. How do you create a new Git repository?
+5. What does `git init` do?
+6. What is the `.git` directory?
+7. What information is stored inside `.git`?
+8. How do you check whether a directory is a Git repository?
+9. What is repository history?
+10. What is a bare repository?
+11. What is the difference between a bare and non-bare repository?
+12. How do you clone an existing repository?
+13. What is the working tree of a repository?
+14. What is the index or staging area?
+15. Can a repository contain multiple branches?
+16. What is the default branch?
+17. How can a repository be connected to a remote?
+18. What happens if the `.git` directory is deleted?
+19. How do you inspect repository status?
+20. Explain the structure and lifecycle of a Git repository.
+
+---
+
+## 4. `git pull` vs `git fetch` — 20 Questions
+
+1. What does `git fetch` do?
+2. What does `git pull` do?
+3. What is the difference between `git fetch` and `git pull`?
+4. Does `git fetch` modify the current working branch?
+5. Does `git pull` modify the current working branch?
+6. What remote information is downloaded by `git fetch`?
+7. What happens internally during `git pull`?
+8. Is `git pull` equivalent to fetch plus merge?
+9. Can `git pull` use rebase?
+10. What does `git pull --rebase` do?
+11. When should you prefer `git fetch`?
+12. When should you use `git pull`?
+13. Why is `git fetch` considered safer for inspection?
+14. What is a remote-tracking branch?
+15. What is `origin/main`?
+16. How can you inspect changes after fetching?
+17. What happens if a pull causes a merge conflict?
+18. How can you fetch only one remote?
+19. How can you fetch all remotes?
+20. Compare `git fetch` and `git pull` with an example workflow.
+
+---
+
+## 5. `git merge` vs `git rebase` — 20 Questions
+
+1. What is `git merge`?
+2. What is `git rebase`?
+3. What is the main difference between merge and rebase?
+4. What is a merge commit?
+5. Does rebase create a new linear history?
+6. How does merge preserve branch history?
+7. How does rebase rewrite commit history?
+8. What is a fast-forward merge?
+9. What is a three-way merge?
+10. What is an interactive rebase?
+11. What does `git rebase -i` allow you to do?
+12. When should merge be preferred?
+13. When should rebase be preferred?
+14. Why should rebasing shared public history be avoided?
+15. How are conflicts handled during rebase?
+16. How are conflicts handled during merge?
+17. What is the effect of rebasing a feature branch onto main?
+18. Compare resulting history after merge and rebase.
+19. How can you abort a merge or rebase?
+20. Explain `git merge` vs `git rebase` using a branch-history diagram.
+
+---
+
+## 6. What is a Branch in Git? — 20 Questions
+
+1. What is a branch in Git?
+2. Why are branches used?
+3. How do you create a branch?
+4. How do you switch to a branch?
+5. What does `git switch` do?
+6. What does `git checkout` do?
+7. How do you list branches?
+8. What is the current branch?
+9. What is the default branch?
+10. What is a feature branch?
+11. What is a release branch?
+12. What is a hotfix branch?
+13. How does Git store a branch internally?
+14. What is a branch pointer?
+15. What happens when a new commit is made on a branch?
+16. How do you delete a branch?
+17. How do you rename a branch?
+18. How do you merge one branch into another?
+19. What happens when branches diverge?
+20. Explain a feature-branch workflow from creation to merge.
+
+---
+
+## 7. Why Do We Use Pull Requests? — 20 Questions
+
+1. What is a Pull Request?
+2. Why are Pull Requests used?
+3. What is code review?
+4. How does a Pull Request support collaboration?
+5. Who creates a Pull Request?
+6. Who reviews a Pull Request?
+7. What information should a good Pull Request contain?
+8. What is a base branch?
+9. What is a compare branch?
+10. What happens when reviewers request changes?
+11. What is an approval in a Pull Request?
+12. What is a draft Pull Request?
+13. Can automated tests run on a Pull Request?
+14. How do CI pipelines integrate with Pull Requests?
+15. What is a protected branch?
+16. Why might direct pushes to main be restricted?
+17. What merge strategies can be used for Pull Requests?
+18. What is squash merging?
+19. What happens after a Pull Request is merged?
+20. Explain a complete Pull Request workflow in a development team.
+
+---
+
+## 8. Git Stash — 20 Questions
+
+1. What is Git stash?
+2. Why is `git stash` used?
+3. What happens when you run `git stash`?
+4. Does Git stash save tracked file changes?
+5. Does Git stash save untracked files by default?
+6. How do you include untracked files in a stash?
+7. What is `git stash push`?
+8. How do you list saved stashes?
+9. How do you apply a stash?
+10. What is the difference between `git stash apply` and `git stash pop`?
+11. How do you delete a stash?
+12. What is `git stash drop`?
+13. What is `git stash clear`?
+14. How can you add a message to a stash?
+15. How do you apply a specific stash?
+16. Can a stash cause conflicts?
+17. How do you resolve stash conflicts?
+18. When is stashing useful before switching branches?
+19. What is the difference between stash and commit?
+20. Explain a practical workflow using `git stash`.
+
+---
+
+## 9. `git reset` vs `git revert` — 20 Questions
+
+1. What is `git reset`?
+2. What is `git revert`?
+3. What is the main difference between reset and revert?
+4. What does `git reset --soft` do?
+5. What does `git reset --mixed` do?
+6. What does `git reset --hard` do?
+7. What does `git revert` create?
+8. Does revert rewrite commit history?
+9. Does reset rewrite branch history?
+10. When should revert be preferred?
+11. When is reset useful?
+12. Why is revert safer for shared branches?
+13. What happens to the staging area after a soft reset?
+14. What happens to the working tree after a hard reset?
+15. How can a reset accidentally cause data loss?
+16. How do you revert a specific commit?
+17. Can a merge commit be reverted?
+18. What is the difference between reset and checkout/restore?
+19. How does reflog help recover from an incorrect reset?
+20. Compare reset and revert with practical examples.
+
+---
+
+## 10. Merge Conflict — 20 Questions
+
+1. What is a merge conflict?
+2. Why do merge conflicts occur?
+3. What happens when two developers modify the same line?
+4. Can conflicts occur even if different files are changed?
+5. What are conflict markers in Git?
+6. What does `<<<<<<<` mean?
+7. What does `=======` mean?
+8. What does `>>>>>>>` mean?
+9. What is an add/add conflict?
+10. What is a modify/delete conflict?
+11. Can merge conflicts occur during rebase?
+12. Can merge conflicts occur during cherry-pick?
+13. How do you check which files are conflicted?
+14. What does `git status` show during a conflict?
+15. What should be done after resolving a conflict manually?
+16. How can you abort a merge?
+17. How can you abort a rebase?
+18. How can merge tools help?
+19. How can teams reduce merge conflicts?
+20. Explain how a merge conflict occurs using a branch example.
+
+---
+
+## 11. How Do You Resolve Merge Conflicts? — 20 Questions
+
+1. What is the first step after Git reports a merge conflict?
+2. How do you identify conflicted files?
+3. How do you open and inspect conflict markers?
+4. How do you decide which version to keep?
+5. Can both conflicting changes be kept?
+6. What should you remove after resolving a conflict?
+7. What does `git add` do after conflict resolution?
+8. How do you finish a merge after resolving conflicts?
+9. How do you continue a rebase after resolving conflicts?
+10. What does `git rebase --continue` do?
+11. How do you skip a commit during rebase?
+12. How do you abort the conflict resolution process?
+13. What is `git mergetool`?
+14. How can VS Code help resolve merge conflicts?
+15. Why should tests be run after resolving conflicts?
+16. How can you inspect changes before committing a resolution?
+17. What is "ours" vs "theirs" in a conflict?
+18. How do you resolve a binary-file conflict?
+19. What are best practices for conflict resolution?
+20. Explain the complete merge-conflict-resolution workflow.
+
+---
+
+## 12. Local Repository vs Remote Repository — 20 Questions
+
+1. What is a local repository?
+2. What is a remote repository?
+3. What is the difference between local and remote repositories?
+4. Where is a local repository stored?
+5. Where is a remote repository stored?
+6. What is `origin`?
+7. How do you view configured remotes?
+8. How do you add a remote?
+9. How do you remove a remote?
+10. What does `git push` do?
+11. What does `git fetch` do?
+12. What does `git pull` do?
+13. Can you commit without an internet connection?
+14. Can you push without a remote repository?
+15. What is a remote-tracking branch?
+16. What is upstream tracking?
+17. How do you set the upstream branch?
+18. Can one local repository have multiple remotes?
+19. Why are remote repositories useful for collaboration and backup?
+20. Explain how local and remote repositories interact in a team workflow.
+
+---
+
+## 13. `.gitignore` — 20 Questions
+
+1. What is `.gitignore`?
+2. Why is `.gitignore` used?
+3. Where is `.gitignore` typically placed?
+4. How do you ignore a specific file?
+5. How do you ignore a folder?
+6. How do wildcard patterns work in `.gitignore`?
+7. How do you ignore all `.log` files?
+8. How do you exclude a file from an ignored pattern?
+9. What does `!` mean in `.gitignore`?
+10. Can `.gitignore` remove an already tracked file?
+11. How do you stop tracking a file while keeping it locally?
+12. Why should environment files often be ignored?
+13. Why should dependency/build directories often be ignored?
+14. What is a global Git ignore file?
+15. What is `.git/info/exclude`?
+16. What is the difference between `.gitignore` and `.git/info/exclude`?
+17. How do you check why a file is ignored?
+18. What does `git check-ignore` do?
+19. Give common `.gitignore` entries for a software project.
+20. Explain how Git decides whether a file should be ignored.
+
+---
+
+## 14. `git clone` vs Fork — 20 Questions
+
+1. What is `git clone`?
+2. What is a repository fork?
+3. What is the difference between cloning and forking?
+4. Is fork a core Git command?
+5. Where is a fork created?
+6. Where is a clone created?
+7. What does `git clone` download?
+8. Does cloning copy commit history?
+9. When is a fork useful?
+10. When is cloning sufficient?
+11. What is commonly meant by `origin` after cloning a fork?
+12. What is an `upstream` remote?
+13. How do you add the original repository as upstream?
+14. How do you sync a fork with the original repository?
+15. Why is forking common in open-source development?
+16. Can you clone a repository without forking it?
+17. Can you fork a repository without cloning it locally?
+18. Compare fork-based and branch-based collaboration.
+19. Explain a typical open-source contribution workflow using fork and clone.
+20. Compare `git clone`, fork, `origin`, and `upstream`.
+
+---
+
+## 15. HEAD in Git — 20 Questions
+
+1. What is HEAD in Git?
+2. What does HEAD normally point to?
+3. How is HEAD related to the current branch?
+4. What happens to HEAD when you switch branches?
+5. What is `HEAD~1`?
+6. What is `HEAD^`?
+7. What does `HEAD~3` represent?
+8. Can HEAD point directly to a commit?
+9. What is a symbolic reference?
+10. Where is HEAD stored?
+11. How can you inspect HEAD?
+12. How is HEAD used by `git reset`?
+13. How is HEAD used by `git checkout` or `git switch`?
+14. What is `ORIG_HEAD`?
+15. How does HEAD move when a new commit is created?
+16. What does `git show HEAD` do?
+17. What does `git diff HEAD` show?
+18. What is the relationship between HEAD, branch, and commit?
+19. What happens to HEAD after checking out an older commit?
+20. Explain HEAD with a branch-pointer diagram.
+
+---
+
+## 16. `git add .` vs `git add <file>` — 20 Questions
+
+1. What does `git add` do?
+2. What is the staging area?
+3. What does `git add .` do?
+4. What does `git add <file>` do?
+5. What is the difference between adding all changes and one file?
+6. Does `git add .` create a commit?
+7. Can deleted files be staged using `git add`?
+8. What does `git add -A` do?
+9. What does `git add -u` do?
+10. How do you stage only part of a file?
+11. What does `git add -p` do?
+12. Why is selective staging useful?
+13. How can you unstage a file?
+14. What does `git restore --staged` do?
+15. How do you inspect staged changes?
+16. What does `git diff --staged` show?
+17. Why should unrelated changes be committed separately?
+18. What happens after files are staged?
+19. Compare `git add .`, `git add -A`, and `git add <file>`.
+20. Explain a clean staging-and-commit workflow.
+
+---
+
+## 17. Detached HEAD State — 20 Questions
+
+1. What is a detached HEAD state?
+2. How does Git normally attach HEAD to a branch?
+3. How can HEAD become detached?
+4. What happens when you checkout a specific commit?
+5. Can you make commits in detached HEAD state?
+6. What happens to detached commits if no branch references them?
+7. How can you save work created in detached HEAD state?
+8. How do you create a branch from a detached HEAD?
+9. Is detached HEAD always an error?
+10. Why is detached HEAD useful for inspecting old commits?
+11. Can checking out a tag cause detached HEAD?
+12. How can you return to a normal branch?
+13. What does `git status` show in detached HEAD state?
+14. What happens if you switch branches after making detached commits?
+15. Can reflog recover detached commits?
+16. What is the difference between HEAD attached to a branch and HEAD attached to a commit?
+17. How does detached HEAD affect new commits?
+18. How can CI systems use detached HEAD?
+19. Give a practical example of detached HEAD.
+20. Explain detached HEAD using a Git commit graph.
+
+---
+
+## 18. Git Workflow in Teams — 20 Questions
+
+1. What is a Git workflow?
+2. Why do teams define Git workflows?
+3. What is a feature-branch workflow?
+4. What is Gitflow?
+5. What is trunk-based development?
+6. What is a main branch?
+7. What is a development branch?
+8. What is a feature branch?
+9. What is a release branch?
+10. What is a hotfix branch?
+11. How should a developer start work on a new feature?
+12. Why should developers regularly sync with the main branch?
+13. What role do Pull Requests play in team workflows?
+14. What role does code review play?
+15. How does CI/CD integrate with Git?
+16. Why are small, focused commits useful?
+17. How should commit messages be written?
+18. How can teams avoid unnecessary merge conflicts?
+19. What are branch-protection rules?
+20. Explain a complete team workflow from issue assignment to production merge.
+
+---
+
+## 19. How Do You Undo a Commit? — 20 Questions
+
+1. What are the main ways to undo a Git commit?
+2. How do you undo the most recent commit while keeping changes staged?
+3. What does `git reset --soft HEAD~1` do?
+4. How do you undo a commit while keeping changes unstaged?
+5. What does `git reset HEAD~1` do?
+6. How do you completely discard the last commit and its changes?
+7. What does `git reset --hard HEAD~1` do?
+8. How do you safely undo a pushed/shared commit?
+9. What does `git revert` do?
+10. What is the difference between undoing a local and a pushed commit?
+11. How do you amend the last commit?
+12. What does `git commit --amend` do?
+13. How can you change the last commit message?
+14. How can you add a forgotten file to the previous commit?
+15. How do you recover an accidentally reset commit?
+16. What is `git reflog`?
+17. Can you revert multiple commits?
+18. Why can force-pushing rewritten history be dangerous?
+19. When should reset, revert, and amend each be used?
+20. Explain safe strategies for undoing commits in local and shared branches.
+
+---
+
+## 20. Code Works Locally but Fails After Merge — Debugging — 20 Questions
+
+1. What should you check first if code works locally but fails after a merge?
+2. How do you verify which commit introduced the failure?
+3. How can `git log` help debug the issue?
+4. How can `git diff` help compare working and failing versions?
+5. What is `git bisect`?
+6. How can `git bisect` identify a problematic commit?
+7. How do you verify that all dependencies are installed?
+8. How can dependency-version differences cause failures?
+9. How can environment-variable differences cause failures?
+10. How can configuration files differ between environments?
+11. How can unresolved merge logic cause runtime bugs?
+12. Why should tests be run after resolving merge conflicts?
+13. How can database migrations cause post-merge failures?
+14. How can stale build artifacts cause problems?
+15. How can cached dependencies cause failures?
+16. How do you inspect CI/CD logs?
+17. How do you reproduce the issue from a clean clone?
+18. How do you compare your local branch with the merged branch?
+19. How can a revert or hotfix be used if production is affected?
+20. Explain a systematic debugging workflow for code that works locally but breaks after merge.
+
+# SQL Question Bank — 400 Questions
+
+## 1. Find Nth Highest Salary — 20 Questions
+
+1. How do you find the 3rd highest salary from an Employee table?
+2. How do you find the Nth highest salary using `LIMIT` and `OFFSET`?
+3. How do you find the Nth highest salary using a subquery?
+4. How do you find the Nth highest salary using `DENSE_RANK()`?
+5. How do you find the Nth highest salary using `ROW_NUMBER()`?
+6. What is the difference between `RANK()` and `DENSE_RANK()` for finding salaries?
+7. How do you find the 5th highest distinct salary?
+8. How do you handle duplicate salaries while finding the Nth highest salary?
+9. How do you find the Nth highest salary without using `LIMIT`?
+10. How do you find the Nth highest salary without using window functions?
+11. How do you find employees having the Nth highest salary?
+12. How do you find the second highest salary when duplicate salaries exist?
+13. What should the query return if fewer than N distinct salaries exist?
+14. How can `MAX()` and subqueries be used to find the Nth highest salary?
+15. How do you find the Nth highest salary department-wise?
+16. How do you find the Nth highest salary using a correlated subquery?
+17. How does `OFFSET` work when finding the Nth highest salary?
+18. Compare different approaches for finding the Nth highest salary.
+19. Write a query to find the 3rd highest salary from an Employee table.
+20. Write a generic SQL query to find the Nth highest distinct salary.
+
+---
+
+# 2. Second Highest Salary — 20 Questions
+
+1. How do you find the second highest salary?
+2. How do you find the second highest distinct salary?
+3. How do you find the second highest salary using `MAX()`?
+4. How do you find the second highest salary using a subquery?
+5. How do you find the second highest salary using `DENSE_RANK()`?
+6. How do you find the second highest salary using `LIMIT` and `OFFSET`?
+7. How do you find the employee who earns the second highest salary?
+8. What happens if two employees have the highest salary?
+9. How do you handle duplicate salaries?
+10. How do you return `NULL` when a second highest salary does not exist?
+11. How do you find the second highest salary department-wise?
+12. How do you find the second highest salary without using window functions?
+13. How do you find the second highest salary using `ROW_NUMBER()`?
+14. Why can `ROW_NUMBER()` produce an incorrect result with duplicate salaries?
+15. Why is `DENSE_RANK()` often useful for this problem?
+16. How do you find all employees earning the second highest salary?
+17. How would you solve this problem in MySQL?
+18. How would you solve it in PostgreSQL?
+19. Write three different queries to find the second highest salary.
+20. Explain the most common mistakes when finding the second highest salary.
+
+---
+
+# 3. Find Duplicate Records — 20 Questions
+
+1. What is a duplicate record?
+2. How do you find duplicate values in a column?
+3. How does `GROUP BY` help identify duplicates?
+4. How does `HAVING COUNT(*) > 1` identify duplicates?
+5. How do you find duplicate employee names?
+6. How do you find duplicate email addresses?
+7. How do you find complete duplicate rows?
+8. How do you find duplicates based on multiple columns?
+9. What is the difference between duplicate values and duplicate rows?
+10. How do you find duplicate records using a window function?
+11. How does `ROW_NUMBER()` help identify duplicates?
+12. How do you find duplicate records without `GROUP BY`?
+13. How do you find duplicate emails while keeping the first occurrence?
+14. How do you count the number of duplicate records?
+15. How do you find departments containing duplicate employee records?
+16. How do you identify duplicates using a self join?
+17. How do you find duplicate records based on case-insensitive comparison?
+18. How do you find duplicate records involving `NULL` values?
+19. Write a query to find duplicate email addresses.
+20. Write a query to identify complete duplicate rows.
+
+---
+
+# 4. Delete Duplicate Rows — 20 Questions
+
+1. How do you delete duplicate rows from a table?
+2. Why should duplicate rows be identified before deleting them?
+3. How can `ROW_NUMBER()` be used to delete duplicates?
+4. How can a self join be used to delete duplicates?
+5. How can a CTE be used to delete duplicates?
+6. How do you keep the oldest record and delete duplicates?
+7. How do you keep the newest record and delete duplicates?
+8. How do you delete duplicate email addresses?
+9. How do you delete duplicates based on multiple columns?
+10. What is the role of a primary key when deleting duplicates?
+11. How can you delete duplicates while preserving one record?
+12. How do you delete duplicates in MySQL?
+13. How do you delete duplicates in PostgreSQL?
+14. How can `ROWID` be used for duplicate removal in Oracle?
+15. What risks exist when deleting duplicate data?
+16. How should duplicate deletion be tested safely?
+17. How can a backup help before deleting duplicates?
+18. How can a unique constraint prevent future duplicates?
+19. Write a query using `ROW_NUMBER()` to delete duplicates.
+20. Explain a safe workflow for removing duplicate rows.
+
+---
+
+# 5. Highest Salary Department-Wise — 20 Questions
+
+1. How do you find the highest salary in each department?
+2. How can `GROUP BY` find department-wise maximum salary?
+3. How can `MAX()` be used department-wise?
+4. How do you find the employee earning the highest salary in each department?
+5. How do you handle ties for the highest salary?
+6. How does `DENSE_RANK()` solve the department-wise highest salary problem?
+7. How does `ROW_NUMBER()` differ from `DENSE_RANK()` here?
+8. How can a correlated subquery find department-wise highest salary?
+9. How can a self join solve this problem?
+10. How do you display department name along with maximum salary?
+11. How do you find the top 2 salaries in each department?
+12. How do you find the top 3 employees in each department?
+13. How do you find departments with no employees?
+14. How do you handle `NULL` salaries?
+15. How do you find the highest salary among active employees department-wise?
+16. How do you find the highest salary for each location?
+17. How do you find employees whose salary equals their department's maximum?
+18. Write a query using `DENSE_RANK()` for this problem.
+19. Write a query using `GROUP BY` for department-wise maximum salary.
+20. Compare different approaches to finding department-wise highest salaries.
+
+---
+
+# 6. Employees Earning More Than Department Average — 20 Questions
+
+1. How do you find employees earning more than their department average?
+2. How can a correlated subquery solve this problem?
+3. How can a window function calculate department averages?
+4. How does `AVG()` work with `GROUP BY`?
+5. How do you calculate average salary department-wise?
+6. How do you compare each employee's salary with their department average?
+7. How do you find employees earning below department average?
+8. How do you find employees earning exactly the department average?
+9. How do you display the department average alongside employee salary?
+10. How do you find employees earning more than the company average?
+11. What is the difference between company average and department average?
+12. How do you handle departments containing `NULL` salaries?
+13. How does `AVG()` treat `NULL` values?
+14. How can a CTE solve this problem?
+15. How can a derived table solve it?
+16. How can `AVG() OVER(PARTITION BY ...)` solve it?
+17. How do you find the percentage difference from the department average?
+18. How do you find employees earning 20% more than their department average?
+19. Write a query using a window function.
+20. Write a query using a correlated subquery.
+
+---
+
+# 7. Employees With Same Salary — 20 Questions
+
+1. How do you find employees having the same salary?
+2. How can `GROUP BY salary` identify salary groups?
+3. How does `HAVING COUNT(*) > 1` help?
+4. How do you display all employees sharing a salary?
+5. How do you find the number of employees for each salary?
+6. How do you find the most common salary?
+7. How do you find duplicate salaries department-wise?
+8. How do you find employees sharing both salary and department?
+9. How can a self join identify employees with the same salary?
+10. How do you avoid matching an employee with themselves in a self join?
+11. How do you find pairs of employees having the same salary?
+12. How do you find the highest salary shared by multiple employees?
+13. How do you find the lowest duplicated salary?
+14. How do you find all salaries occurring exactly twice?
+15. How do you find all salaries occurring more than three times?
+16. How do you handle `NULL` salaries?
+17. How can `COUNT() OVER(PARTITION BY salary)` solve this?
+18. Write a query using `GROUP BY` and `HAVING`.
+19. Write a query using a window function.
+20. Compare self join, grouping, and window-function approaches.
+
+---
+
+# 8. Manager Name With Employee Name Using Self Join — 20 Questions
+
+1. What is a self join?
+2. Why is a self join useful for employee-manager relationships?
+3. How can an Employee table contain both employee and manager information?
+4. How do you find each employee's manager name?
+5. How does a foreign key to the same table work?
+6. What aliases are needed for a self join?
+7. Why is the Employee table joined with itself?
+8. How do you find employees without managers?
+9. How do you find managers with their employees?
+10. How do you display employee and manager salaries?
+11. How do you find employees earning more than their managers?
+12. How do you find employees reporting to the same manager?
+13. How do you count employees under each manager?
+14. How do you find managers with more than five employees?
+15. How can a left self join include top-level employees?
+16. What happens if an employee's manager ID is invalid?
+17. How do you find the hierarchy of employees and managers?
+18. How does a recursive CTE differ from a simple self join?
+19. Write a self-join query to display employee and manager names.
+20. Explain the employee-manager relationship using a self-join diagram.
+
+---
+
+# 9. Departments Having More Than 5 Employees — 20 Questions
+
+1. How do you find departments having more than five employees?
+2. Why is `GROUP BY` required?
+3. Why is `HAVING` used instead of `WHERE`?
+4. How does `COUNT(*)` work with departments?
+5. How do you count employees department-wise?
+6. How do you find departments having exactly five employees?
+7. How do you find departments having fewer than five employees?
+8. How do you find departments having more than 10 employees?
+9. How do you display department names with employee counts?
+10. How do you count only active employees?
+11. How does `COUNT(column)` differ from `COUNT(*)`?
+12. How do you include departments having zero employees?
+13. How do you use a `LEFT JOIN` for this problem?
+14. How do you find the department with the most employees?
+15. How do you find the top 3 departments by employee count?
+16. How can a subquery solve this problem?
+17. How can a CTE solve it?
+18. How can window functions rank departments by employee count?
+19. Write a query using `GROUP BY` and `HAVING`.
+20. Explain the difference between filtering before and after aggregation.
+
+---
+
+# 10. Customers Who Never Placed Orders — 20 Questions
+
+1. How do you find customers who never placed an order?
+2. How can `LEFT JOIN` solve this problem?
+3. How can `NOT EXISTS` solve this problem?
+4. How can `NOT IN` solve this problem?
+5. Why can `NOT IN` behave unexpectedly with `NULL` values?
+6. What is an anti-join?
+7. How do you find customers with zero orders?
+8. How do you count orders per customer?
+9. How do you find customers who placed exactly one order?
+10. How do you find customers who placed more than five orders?
+11. How do you find customers who have never purchased a particular product?
+12. How do you find customers who ordered in one year but not another?
+13. How can `GROUP BY` and `HAVING` solve this problem?
+14. How do you display customer information with order count?
+15. How do you find inactive customers?
+16. How do you handle customers with `NULL` order IDs?
+17. Compare `LEFT JOIN`, `NOT EXISTS`, and `NOT IN`.
+18. Write a query using `LEFT JOIN`.
+19. Write a query using `NOT EXISTS`.
+20. Explain the best practices for finding unmatched records.
+
+---
+
+# 11. DELETE vs DROP vs TRUNCATE — 20 Questions
+
+1. What is `DELETE`?
+2. What is `DROP`?
+3. What is `TRUNCATE`?
+4. What is the difference between DELETE, DROP, and TRUNCATE?
+5. Which command removes selected rows?
+6. Which command removes the entire table?
+7. Which command removes all rows while keeping the table structure?
+8. Can `DELETE` use a `WHERE` clause?
+9. Can `TRUNCATE` normally use a `WHERE` clause?
+10. What happens to table structure after `DROP`?
+11. How does transaction rollback behavior differ?
+12. How do DELETE and TRUNCATE differ in logging behavior?
+13. How do DELETE and TRUNCATE differ in performance?
+14. How does `TRUNCATE` affect auto-increment/identity values?
+15. Can `DROP` remove indexes and constraints?
+16. Can triggers execute on DELETE?
+17. What precautions should be taken before using DROP?
+18. When should DELETE be used?
+19. When should TRUNCATE be used?
+20. Compare DELETE, TRUNCATE, and DROP in a table.
+
+---
+
+# 12. WHERE vs HAVING — 20 Questions
+
+1. What is the `WHERE` clause?
+2. What is the `HAVING` clause?
+3. What is the main difference between WHERE and HAVING?
+4. When is WHERE evaluated?
+5. When is HAVING evaluated?
+6. Can WHERE be used before grouping?
+7. Can HAVING filter aggregate results?
+8. Why can't aggregate functions normally be used directly in WHERE?
+9. Can HAVING be used without GROUP BY?
+10. Give an example using WHERE.
+11. Give an example using HAVING.
+12. How can both WHERE and HAVING be used in the same query?
+13. How do WHERE and HAVING affect performance?
+14. How can WHERE reduce rows before aggregation?
+15. How can HAVING filter grouped results?
+16. Write a query finding departments with more than five employees.
+17. Write a query filtering employees before grouping.
+18. Compare WHERE and HAVING using an employee table.
+19. What common mistakes occur when using WHERE and HAVING?
+20. Explain the logical order of SQL query execution involving WHERE and HAVING.
+
+---
+
+# 13. INNER JOIN vs LEFT JOIN — 20 Questions
+
+1. What is an INNER JOIN?
+2. What is a LEFT JOIN?
+3. What is the main difference between INNER JOIN and LEFT JOIN?
+4. Which rows are returned by INNER JOIN?
+5. Which rows are preserved by LEFT JOIN?
+6. What happens when there is no matching row?
+7. Why does LEFT JOIN produce `NULL` values?
+8. How do you find unmatched records using LEFT JOIN?
+9. How can INNER JOIN be used to find customers with orders?
+10. How can LEFT JOIN find customers without orders?
+11. Can INNER JOIN return duplicate rows?
+12. Can LEFT JOIN return duplicate rows?
+13. What happens when multiple matching rows exist?
+14. How does a join condition affect the result?
+15. What happens if the join condition is missing?
+16. How can WHERE after LEFT JOIN accidentally turn it into an INNER JOIN?
+17. Compare INNER JOIN and LEFT JOIN with sample tables.
+18. When should INNER JOIN be used?
+19. When should LEFT JOIN be used?
+20. Explain INNER JOIN vs LEFT JOIN with a diagram and example.
+
+---
+
+# 14. Normalization and Its Types — 20 Questions
+
+1. What is database normalization?
+2. Why is normalization required?
+3. What is data redundancy?
+4. What is an insertion anomaly?
+5. What is an update anomaly?
+6. What is a deletion anomaly?
+7. What is First Normal Form (1NF)?
+8. What is Second Normal Form (2NF)?
+9. What is Third Normal Form (3NF)?
+10. What is BCNF?
+11. What is a functional dependency?
+12. What is a partial dependency?
+13. What is a transitive dependency?
+14. How does 2NF eliminate partial dependency?
+15. How does 3NF eliminate transitive dependency?
+16. How is BCNF different from 3NF?
+17. Can a table be in 3NF but not BCNF?
+18. What are the advantages of normalization?
+19. What are the disadvantages of excessive normalization?
+20. Explain normalization from 1NF through BCNF with an example.
+
+---
+
+# 15. PRIMARY KEY vs FOREIGN KEY — 20 Questions
+
+1. What is a primary key?
+2. What is a foreign key?
+3. What is the main difference between primary and foreign keys?
+4. Can a table have multiple primary keys?
+5. Can a table have multiple foreign keys?
+6. Can a primary key contain `NULL`?
+7. Can a foreign key contain `NULL`?
+8. What is a composite primary key?
+9. What is a composite foreign key?
+10. What is referential integrity?
+11. How does a foreign key establish relationships between tables?
+12. What happens if a foreign key references a nonexistent parent row?
+13. What is `ON DELETE CASCADE`?
+14. What is `ON DELETE SET NULL`?
+15. What is `ON UPDATE CASCADE`?
+16. Can a foreign key reference a unique key?
+17. Can a table reference itself using a foreign key?
+18. How are primary keys indexed in many database systems?
+19. Compare primary and foreign keys with an example.
+20. Explain primary key and foreign key relationships using two tables.
+
+---
+
+# 16. Indexing — 20 Questions
+
+1. What is an index in SQL?
+2. Why are indexes used?
+3. How does an index improve query performance?
+4. What are the disadvantages of indexes?
+5. What is a single-column index?
+6. What is a composite index?
+7. What is a unique index?
+8. What is a clustered index?
+9. What is a non-clustered index?
+10. On which columns should indexes generally be created?
+11. Why can too many indexes hurt performance?
+12. How do indexes affect INSERT operations?
+13. How do indexes affect UPDATE operations?
+14. How do indexes affect DELETE operations?
+15. What is an index scan?
+16. What is an index seek?
+17. What is a full table scan?
+18. How can you inspect whether a query uses an index?
+19. What is a covering index?
+20. Explain indexing with an example and discuss its performance trade-offs.
+
+---
+
+# 17. UNION vs UNION ALL — 20 Questions
+
+1. What is `UNION`?
+2. What is `UNION ALL`?
+3. What is the main difference between UNION and UNION ALL?
+4. Does UNION remove duplicate rows?
+5. Does UNION ALL remove duplicates?
+6. Which is generally faster and why?
+7. What conditions must two queries satisfy for UNION?
+8. Must both queries have the same number of columns?
+9. Must corresponding columns have compatible data types?
+10. How are column names determined in a UNION result?
+11. Can UNION combine data from different tables?
+12. Can UNION combine more than two queries?
+13. How does ORDER BY work with UNION?
+14. Can individual queries normally have separate ORDER BY clauses?
+15. How does NULL behave in UNION?
+16. Give an example where UNION is appropriate.
+17. Give an example where UNION ALL is appropriate.
+18. What performance cost is associated with duplicate elimination?
+19. Compare UNION and UNION ALL with sample queries.
+20. Explain when you would choose UNION instead of UNION ALL.
+
+---
+
+# 18. ACID Properties — 20 Questions
+
+1. What does ACID stand for?
+2. What is Atomicity?
+3. What is Consistency?
+4. What is Isolation?
+5. What is Durability?
+6. Why are ACID properties important?
+7. Give a real-world example of Atomicity.
+8. How does a transaction maintain consistency?
+9. What problems can occur without isolation?
+10. How does durability protect committed data?
+11. What is a transaction?
+12. What are COMMIT and ROLLBACK?
+13. How does rollback relate to Atomicity?
+14. How do database logs support durability?
+15. What is the relationship between ACID and concurrency?
+16. How do isolation levels affect ACID behavior?
+17. What happens if a transaction fails halfway?
+18. Explain ACID using a bank-transfer example.
+19. Compare ACID with eventual consistency at a high level.
+20. Explain all four ACID properties with practical examples.
+
+---
+
+# 19. Clustered vs Non-Clustered Index — 20 Questions
+
+1. What is a clustered index?
+2. What is a non-clustered index?
+3. What is the main difference between clustered and non-clustered indexes?
+4. How is table data organized with a clustered index?
+5. How does a non-clustered index reference table data?
+6. How many clustered indexes can a table generally have?
+7. How many non-clustered indexes can a table have?
+8. Why is a clustered index often associated with the primary key?
+9. What is the effect of clustering on range queries?
+10. What are the advantages of non-clustered indexes?
+11. What are the disadvantages of clustered indexes?
+12. How do clustered indexes affect INSERT performance?
+13. How do non-clustered indexes affect INSERT performance?
+14. What is a heap table?
+15. What is a covering non-clustered index?
+16. How does an index seek differ from an index scan?
+17. Can a table have a clustered index on a non-primary-key column?
+18. How should clustered-index columns be selected?
+19. Compare clustered and non-clustered indexes with an example.
+20. Explain clustered vs non-clustered indexing using a simple data-structure analogy.
+
+---
+
+# 20. Subquery vs Correlated Subquery — 20 Questions
+
+1. What is a subquery?
+2. What is a correlated subquery?
+3. What is the main difference between them?
+4. How many times is a normal subquery generally evaluated conceptually?
+5. How does a correlated subquery depend on the outer query?
+6. Where can subqueries be used?
+7. Can a subquery be used in the SELECT clause?
+8. Can a subquery be used in the FROM clause?
+9. Can a subquery be used in the WHERE clause?
+10. What is a scalar subquery?
+11. What is a multi-row subquery?
+12. How does `IN` work with a subquery?
+13. How does `EXISTS` work with a correlated subquery?
+14. Why can correlated subqueries be slower?
+15. How can a correlated subquery be rewritten using a JOIN?
+16. How can a subquery find employees earning above average?
+17. How can a correlated subquery find employees earning above department average?
+18. Compare `EXISTS` and `IN`.
+19. Write an example of a normal subquery.
+20. Write an example of a correlated subquery and explain its execution.
+

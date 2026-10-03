@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Quiz - Interview Practice Question Bank</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/dashboard.html">
+                <span class="fw-bold">Interview Practice Question Bank</span>
+            </a>
+            <div class="ms-auto" id="navbar-auth-section">
+                <!-- Injected dynamically by main.js -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="py-4">
+        <div class="container" style="max-width: 900px;">
+
+            <!-- View 1: Quiz Configuration & Setup -->
+            <div id="quiz-setup-view" class="card shadow-sm p-4 border mb-4">
+                <div class="text-center mb-4">
+                    <span class="badge bg-primary text-uppercase px-3 py-2 mb-2">3,000+ Question Bank</span>
+                    <h2 class="fw-bold mb-1">Topic-Wise Technical Quiz</h2>
+                    <p class="text-muted">Choose your technical subject, select a specific topic, and test your knowledge with multiple-choice questions.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div id="quiz-guest-warning" class="alert alert-warning d-none mb-3 py-2 small" role="alert">
+                            <strong>Note:</strong> You are taking this quiz as a guest. <a href="/login.html" class="alert-link">Log in</a> or <a href="/register.html" class="alert-link">Register</a> to save your results to your Dashboard and track your progress.
+                        </div>
+                        <form id="quiz-setup-form" onsubmit="return false;">
+                            <!-- Subject Selection -->
+                            <div class="mb-3">
+                                <label for="select-subject" class="form-label fw-semibold">1. Select Subject</label>
+                                <select id="select-subject" class="form-select form-select-lg" required>
+                                    <option value="" disabled selected>Loading subjects...</option>
+                                </select>
+                                <div class="form-text">Choose from Core CS, Systems, and Programming Language banks.</div>
+                            </div>
+
+                            <!-- Topic Selection -->
+                            <div class="mb-3">
+                                <label for="select-topic" class="form-label fw-semibold">2. Select Topic</label>
+                                <select id="select-topic" class="form-select form-select-lg" disabled required>
+                                    <option value="" disabled selected>Select a subject first</option>
+                                </select>
+                                <div class="form-text" id="topic-help-text">Topics will update based on the selected subject.</div>
+                            </div>
+
+                            <!-- Question Count -->
+                            <div class="mb-4">
+                                <label for="select-count" class="form-label fw-semibold">3. Number of Questions</label>
+                                <div class="row g-2">
+                                    <div class="col-sm-3 col-6">
+                                        <input type="radio" class="btn-check" name="quiz-count" id="count-5" value="5" checked>
+                                        <label class="btn btn-outline-primary w-100 py-2" for="count-5">5 Questions</label>
+                                    </div>
+                                    <div class="col-sm-3 col-6">
+                                        <input type="radio" class="btn-check" name="quiz-count" id="count-10" value="10">
+                                        <label class="btn btn-outline-primary w-100 py-2" for="count-10">10 Questions</label>
+                                    </div>
+                                    <div class="col-sm-3 col-6">
+                                        <input type="radio" class="btn-check" name="quiz-count" id="count-15" value="15">
+                                        <label class="btn btn-outline-primary w-100 py-2" for="count-15">15 Questions</label>
+                                    </div>
+                                    <div class="col-sm-3 col-6">
+                                        <input type="radio" class="btn-check" name="quiz-count" id="count-20" value="20">
+                                        <label class="btn btn-outline-primary w-100 py-2" for="count-20">20 Questions</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Button -->
+                            <div class="d-grid gap-2">
+                                <button type="button" id="btn-start-quiz" class="btn btn-primary btn-lg fw-semibold" disabled>
+                                    Start Quiz
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Feature Highlights -->
+                <div class="row g-3 mt-4 pt-3 border-top text-center">
+                    <div class="col-md-4">
+                        <div class="p-2">
+                            <h6 class="fw-bold mb-1">Instant Scoring</h6>
+                            <p class="text-muted small mb-0">Evaluate your answer option right away with detailed explanations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-2">
+                            <h6 class="fw-bold mb-1">10 Core Subjects</h6>
+                            <p class="text-muted small mb-0">DBMS, OOPS, CN, OS, C++, Java, Python, Linux, Git, SQL.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-2">
+                            <h6 class="fw-bold mb-1">Track Progress</h6>
+                            <p class="text-muted small mb-0">Results are recorded in MySQL to gauge your interview readiness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View 2: Active Quiz Session -->
+            <div id="quiz-active-view" class="card shadow-sm p-4 border mb-4 d-none">
+                <!-- Quiz Meta Bar -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-3 border-bottom gap-2">
+                    <div>
+                        <span id="quiz-badge-subject" class="badge bg-primary me-2">Subject</span>
+                        <span id="quiz-badge-topic" class="badge bg-secondary">Topic</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="text-muted small fw-semibold">
+                            Question <span id="quiz-current-num">1</span> of <span id="quiz-total-num">10</span>
+                        </div>
+                        <div class="badge bg-light text-dark border px-3 py-2 fw-medium" id="quiz-timer">
+                            Time: <span id="quiz-timer-text">00:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress mb-4" style="height: 6px;">
+                    <div id="quiz-progress-bar" class="progress-bar bg-primary" role="progressbar" style="width: 10%;"></div>
+                </div>
+
+                <!-- Question Prompt -->
+                <div class="mb-4">
+                    <h4 id="quiz-question-text" class="fw-bold text-dark lh-base">
+                        Question text goes here...
+                    </h4>
+                </div>
+
+                <!-- Multiple Choice Options -->
+                <div class="d-flex flex-column gap-3 mb-4" id="quiz-options-container">
+                    <!-- Option items generated dynamically -->
+                </div>
+
+                <!-- Explanation / Feedback Banner (Hidden until answer checked) -->
+                <div id="quiz-feedback-box" class="alert d-none mb-4" role="alert">
+                    <div class="d-flex align-items-center mb-1">
+                        <strong id="quiz-feedback-title" class="me-2">Result</strong>
+                    </div>
+                    <p id="quiz-feedback-text" class="mb-0 small"></p>
+                </div>
+
+                <!-- Controls & Navigation -->
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                    <button type="button" id="btn-quit-quiz" class="btn btn-outline-secondary">
+                        Exit Quiz
+                    </button>
+                    <div class="d-flex gap-2">
+                        <button type="button" id="btn-check-answer" class="btn btn-primary px-4 fw-semibold" disabled>
+                            Submit Answer
+                        </button>
+                        <button type="button" id="btn-next-question" class="btn btn-success px-4 fw-semibold d-none">
+                            Next Question
+                        </button>
+                        <button type="button" id="btn-finish-quiz" class="btn btn-success px-4 fw-semibold d-none">
+                            Finish & View Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View 3: Quiz Results & Score Summary -->
+            <div id="quiz-results-view" class="card shadow-sm p-4 border mb-4 d-none">
+                <div class="text-center py-4 border-bottom">
+                    <span id="quiz-result-badge" class="badge bg-success px-3 py-2 text-uppercase mb-2">Quiz Completed</span>
+                    <h2 class="fw-bold mb-1">Performance Summary</h2>
+                    <p class="text-muted mb-3" id="quiz-result-subtitle">Here is how you performed in this technical quiz session.</p>
+
+                    <div class="d-flex justify-content-center align-items-baseline gap-2 my-3">
+                        <span id="quiz-result-score" class="display-3 fw-bold text-primary">0</span>
+                        <span class="fs-4 text-muted">/</span>
+                        <span id="quiz-result-total" class="fs-2 fw-semibold text-muted">0</span>
+                    </div>
+                    <div class="fs-5 fw-bold text-dark mb-2">
+                        Score: <span id="quiz-result-percentage">0</span>%
+                    </div>
+                    <p id="quiz-result-feedback" class="text-muted mx-auto" style="max-width: 600px;"></p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex flex-wrap justify-content-center gap-3 py-4 border-bottom">
+                    <button type="button" id="btn-retake-quiz" class="btn btn-primary px-4 py-2 fw-semibold">
+                        Retake This Topic
+                    </button>
+                    <button type="button" id="btn-new-quiz" class="btn btn-outline-primary px-4 py-2 fw-semibold">
+                        Select Another Topic
+                    </button>
+                    <a href="/weak-topics.html" class="btn btn-outline-danger px-4 py-2 fw-semibold">
+                        View Weak Topics
+                    </a>
+                    <a href="/dashboard.html" class="btn btn-outline-secondary px-4 py-2 fw-semibold">
+                        Dashboard
+                    </a>
+                </div>
+
+                <!-- Detailed Question Review Section -->
+                <div class="mt-4">
+                    <h5 class="fw-bold mb-3">Question-by-Question Review</h5>
+                    <div id="quiz-review-list" class="d-flex flex-column gap-3">
+                        <!-- Review cards generated dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Quiz Attempts Section -->
+            <div id="quiz-history-card" class="card shadow-sm p-4 border">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Recent Topic Quiz Attempts</h5>
+                    <span class="badge bg-light text-muted border" id="quiz-history-count">0 Recorded</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Topic</th>
+                                <th>Score</th>
+                                <th>Percentage</th>
+                                <th>Time</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="quiz-history-tbody">
+                            <tr>
+                                <td colspan="6" class="text-center text-muted py-3">Loading recent quiz attempts...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">Interview Practice Question Bank &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Bank - Interview Practice Question Bank</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <span class="fw-bold">Interview Practice Question Bank</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div id="navbar-auth-section" class="w-100">
+                    <!-- dynamic -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <!-- Header -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="fw-bold mb-1">Interview Question Bank</h2>
+                    <p class="text-muted mb-0">Browse, filter, and practice curated technical questions</p>
+                </div>
+                <div class="mt-2 mt-sm-0">
+                    <button id="btn-practice-filtered" class="btn btn-primary fw-semibold px-3">
+                        Practice Filtered Questions (<span id="filtered-count">0</span>)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="card p-3 mb-4 shadow-sm">
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-3">
+                        <label for="filter-search" class="form-label small fw-semibold text-muted mb-1">Search Keywords</label>
+                        <input type="text" id="filter-search" class="form-control form-control-sm" placeholder="e.g. closure, join, ACID...">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="filter-role" class="form-label small fw-semibold text-muted mb-1">Role</label>
+                        <select id="filter-role" class="form-select form-select-sm">
+                            <option value="">All Roles</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="filter-skill" class="form-label small fw-semibold text-muted mb-1">Skill / Topic</label>
+                        <select id="filter-skill" class="form-select form-select-sm">
+                            <option value="">All Skills</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="filter-difficulty" class="form-label small fw-semibold text-muted mb-1">Difficulty</label>
+                        <select id="filter-difficulty" class="form-select form-select-sm">
+                            <option value="">All Difficulties</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-flex gap-2">
+                        <button id="btn-filter-apply" class="btn btn-sm btn-primary w-100">Filter</button>
+                        <button id="btn-filter-clear" class="btn btn-sm btn-outline-secondary w-100">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions List -->
+            <div id="questions-container">
+                <div class="text-center py-5 text-muted">
+                    <div class="spinner-border spinner-border-sm text-primary me-2"></div>
+                    Loading questions...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Question Detail Modal -->
+    <div class="modal fade" id="questionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="modal-q-title">Question Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-q-body">
+                    <!-- Dynamic -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    <a href="#" id="modal-q-practice-btn" class="btn btn-primary btn-sm">Start Timed Practice</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">Interview Practice Question Bank &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/questions.js"></script>
+</body>
+</html>

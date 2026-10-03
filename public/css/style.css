@@ -1,0 +1,308 @@
+/* Interview Practice Question Bank - Clean & Professional Stylesheet */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #eff6ff;
+    --secondary-color: #475569;
+    --success-color: #16a34a;
+    --warning-color: #d97706;
+    --danger-color: #dc2626;
+    --dark-color: #0f172a;
+    --light-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+    --hover-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--primary-color) !important;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #475569;
+    transition: color 0.15s ease-in-out;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Cards */
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    background-color: #ffffff;
+}
+
+.card-hover:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Stat Cards */
+.stat-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+.stat-card.stat-success {
+    border-left-color: var(--success-color);
+}
+
+.stat-card.stat-warning {
+    border-left-color: var(--warning-color);
+}
+
+.stat-card.stat-danger {
+    border-left-color: var(--danger-color);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--dark-color);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Badges */
+.badge-easy {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.badge-medium {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.badge-hard {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Practice Interface */
+.practice-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timer-box {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1e293b;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timer-box.timer-warning {
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+    color: #b91c1c;
+}
+
+.answer-comparison-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+}
+
+.model-answer-section {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+}
+
+.points-list {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+.points-list li {
+    margin-bottom: 0.5rem;
+}
+
+.keywords-tag-cloud .badge {
+    margin-right: 0.35rem;
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4em 0.65em;
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+/* Evaluation Checklist */
+.evaluation-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+}
+
+.rating-btn-group .btn-check:checked + .btn {
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+    color: #64748b;
+    font-size: 0.875rem;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+/* Toast Container */
+#toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1090;
+}
+
+/* Quiz Specific Styling */
+.quiz-option-item {
+    border: 2px solid var(--border-color);
+    border-radius: 0.65rem;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    user-select: none;
+}
+
+.quiz-option-item:hover:not(.locked) {
+    border-color: var(--primary-color);
+    background-color: #f8faff;
+    transform: translateY(-1px);
+    box-shadow: var(--hover-shadow);
+}
+
+.quiz-option-item.selected {
+    border-color: var(--primary-color);
+    background-color: var(--primary-light);
+}
+
+.quiz-option-item.correct {
+    border-color: var(--success-color) !important;
+    background-color: #f0fdf4 !important;
+}
+
+.quiz-option-item.incorrect {
+    border-color: var(--danger-color) !important;
+    background-color: #fef2f2 !important;
+}
+
+.quiz-badge-letter {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background-color: #e2e8f0;
+    color: #334155;
+    transition: all 0.2s ease;
+}
+
+.quiz-option-item.selected .quiz-badge-letter {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.quiz-option-item.correct .quiz-badge-letter {
+    background-color: var(--success-color);
+    color: #ffffff;
+}
+
+.quiz-option-item.incorrect .quiz-badge-letter {
+    background-color: var(--danger-color);
+    color: #ffffff;
+}
+
+.quiz-option-text {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1e293b;
+    padding-top: 3px;
+}
+

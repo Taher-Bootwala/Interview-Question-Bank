@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weak Topic Analysis & Personalised Practice - Interview Practice Question Bank</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/dashboard.html">
+                <span class="fw-bold">Interview Practice Question Bank</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div id="navbar-auth-section" class="w-100">
+                    <!-- dynamic -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <!-- Header -->
+            <div class="mb-4">
+                <h2 class="fw-bold mb-1">Performance Analytics & Weak-Topic Identification</h2>
+                <p class="text-muted mb-0">Transparent calculations based on your historical self-ratings and practice sessions</p>
+            </div>
+
+            <!-- Weak Topics Highlight Banner -->
+            <div id="weak-topics-summary-banner" class="alert alert-info border shadow-sm mb-4 d-none">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div>
+                        <h5 class="alert-heading fw-bold mb-1">Focus Areas Identified</h5>
+                        <p class="mb-0 small" id="banner-text">We have analyzed your practice records to detect topics needing reinforcement.</p>
+                    </div>
+                    <button id="btn-practice-weak-topics" class="btn btn-primary fw-semibold btn-sm px-3">
+                        Launch Weak-Topic Practice
+                    </button>
+                </div>
+            </div>
+
+            <!-- Weak Topics Cards & Table -->
+            <div class="card shadow-sm border mb-5">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <span class="fw-bold text-dark">Topic Performance Matrix</span>
+                    <span class="badge bg-light text-muted border">Scale: 1.0 (Poor) to 4.0 (Excellent)</span>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Skill / Topic</th>
+                                    <th>Attempts</th>
+                                    <th>Questions Evaluated</th>
+                                    <th>Average Rating</th>
+                                    <th>Status</th>
+                                    <th>Suggested Practice</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="topics-analysis-tbody">
+                                <tr>
+                                    <td colspan="7" class="text-center py-4 text-muted">
+                                        <div class="spinner-border spinner-border-sm text-primary me-2"></div>
+                                        Analyzing performance history...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personalised Practice Section -->
+            <div id="personalised" class="pt-2">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                    <div>
+                        <h3 class="fw-bold mb-1">Personalised Practice Recommendation</h3>
+                        <p class="text-muted mb-0">
+                            Prioritizes unattempted questions from your identified weak topics and bookmarked questions
+                        </p>
+                    </div>
+                    <button id="btn-start-personalised-session" class="btn btn-success fw-semibold px-4 py-2">
+                        Start Recommended Practice Set
+                    </button>
+                </div>
+
+                <div id="personalised-questions-container" class="mt-3">
+                    <div class="text-center py-4 text-muted">
+                        <div class="spinner-border spinner-border-sm text-primary me-2"></div>
+                        Generating your custom question recommendations...
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">Interview Practice Question Bank &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/weak-topics.js"></script>
+</body>
+</html>

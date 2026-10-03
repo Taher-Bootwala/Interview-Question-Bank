@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Practice Question Bank - Master Technical Interviews</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/index.html">
+                <span class="fw-bold">Interview Practice Question Bank</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div id="navbar-auth-section" class="w-100">
+                    <!-- Dynamic auth links rendered by main.js -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-5 bg-white border-bottom">
+            <div class="container py-4 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill mb-3">Structured Technical Interview Prep</span>
+                        <h1 class="display-5 fw-bold text-dark mb-3">Prepare, Practice & Excel in Technical Interviews</h1>
+                        <p class="lead text-muted mb-4">
+                            Master your dream tech job with role-specific interview questions, realistic timed practice sessions, topic-wise multiple-choice quizzes, and weak-topic analysis.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="/quiz.html" class="btn btn-success btn-lg px-4 py-2">Start Topic Quiz</a>
+                            <a href="/practice.html" class="btn btn-primary btn-lg px-4 py-2">Start Practice Session</a>
+                            <a href="/questions.html" class="btn btn-outline-secondary btn-lg px-4 py-2">Browse Question Bank</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="py-5">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Platform Features</h2>
+                    <p class="text-muted">Designed for students and job seekers to evaluate and improve their interview readiness</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 card-hover">
+                            <div class="card-body">
+                                <span class="badge bg-primary-subtle text-primary mb-3">Feature 01</span>
+                                <h5 class="card-title fw-bold">Subject & Topic Quiz</h5>
+                                <p class="card-text text-muted">Select your subject and topic from 3,000+ questions and test your conceptual understanding with multiple-choice questions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 card-hover">
+                            <div class="card-body">
+                                <span class="badge bg-success-subtle text-success mb-3">Feature 02</span>
+                                <h5 class="card-title fw-bold">Timed Practice Sessions</h5>
+                                <p class="card-text text-muted">Simulate interview pressure with realistic countdown timers and structured single-question flows.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 card-hover">
+                            <div class="card-body">
+                                <span class="badge bg-warning-subtle text-warning mb-3">Feature 03</span>
+                                <h5 class="card-title fw-bold">Model Answers & Points</h5>
+                                <p class="card-text text-muted">Reveal detailed model explanations, key bullet points, and expected technical keywords to compare with your answers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 card-hover">
+                            <div class="card-body">
+                                <span class="badge bg-danger-subtle text-danger mb-3">Feature 04</span>
+                                <h5 class="card-title fw-bold">Honest Self-Evaluation</h5>
+                                <p class="card-text text-muted">Evaluate your own responses using an objective rubric and rating system to gauge your true comprehension.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 card-hover">
+                            <div class="card-body">
+                                <span class="badge bg-info-subtle text-info mb-3">Feature 05</span>
+                                <h5 class="card-title fw-bold">Weak-Topic Analysis</h5>
+                                <p class="card-text text-muted">Identify recurring skill gaps from your past attempts without black-box AI — pure, transparent performance analytics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 card-hover">
+                            <div class="card-body">
+                                <span class="badge bg-secondary-subtle text-secondary mb-3">Feature 06</span>
+                                <h5 class="card-title fw-bold">Bookmarks & History</h5>
+                                <p class="card-text text-muted">Save tricky questions for quick revision and review all your previous practice attempts anytime.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Available Roles Section -->
+        <section class="py-5 bg-white border-top">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Interview Roles Available</h2>
+                    <p class="text-muted">Choose your targeted role to browse curated interview questions</p>
+                </div>
+
+                <div class="row g-3" id="roles-grid">
+                    <!-- Populated dynamically via JS -->
+                    <div class="col-12 text-center text-muted">Loading available roles...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1 fw-medium text-dark">Interview Practice Question Bank</p>
+            <p class="mb-0 text-muted small">Built with HTML5, CSS3, Bootstrap 5, JavaScript, Node.js, Express & MySQL.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await App.init();
+            
+            // Load available roles
+            try {
+                const res = await fetch('/api/roles');
+                const data = await res.json();
+                const container = document.getElementById('roles-grid');
+                if (data.success && data.roles.length > 0) {
+                    container.innerHTML = data.roles.map(r => `
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <a href="/questions.html?role_id=${r.id}" class="card h-100 text-decoration-none card-hover border text-center p-3">
+                                <h6 class="fw-bold text-dark mb-1">${App.escapeHtml(r.name)}</h6>
+                                <span class="badge bg-light text-muted border">${r.question_count || 0} questions</span>
+                            </a>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<div class="col-12 text-center text-muted">No roles found.</div>';
+                }
+            } catch (err) {
+                console.error('Failed to load roles:', err);
+            }
+        });
+    </script>
+</body>
+</html>
